@@ -1,0 +1,6 @@
+[submodule "lib/vstgui"]
+	path = lib/vstgui
+	url = https://github.com/steinbergmedia/vstgui
+[submodule "lib/dpf"]
+	path = lib/dpf
+	url = https://git.kx.studio/DISTRHO/DPF.git
