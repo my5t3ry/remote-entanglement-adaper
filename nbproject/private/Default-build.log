@@ -1,0 +1,2 @@
+Makefile:25: lib/DPF/Makefile.plugins.mk: No such file or directory
+make: *** No rule to make target 'lib/DPF/Makefile.plugins.mk'.  Stop.

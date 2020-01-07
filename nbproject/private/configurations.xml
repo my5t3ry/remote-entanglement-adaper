@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="build">
+        <df name="remoteEntanglement">
+        </df>
+      </df>
+      <df name="dpf">
+        <df name=".travis">
+        </df>
+        <df name="dgl">
+          <df name="src">
+            <df name="nanovg">
+              <in>fontstash.h</in>
+              <in>nanovg.c</in>
+              <in>nanovg.h</in>
+              <in>nanovg_gl.h</in>
+              <in>nanovg_gl_utils.h</in>
+              <in>stb_image.h</in>
+              <in>stb_truetype.h</in>
+            </df>
+            <df name="pugl">
+              <in>pugl.h</in>
+              <in>pugl_haiku.cpp</in>
+              <in>pugl_internal.h</in>
+              <in>pugl_osx.m</in>
+              <in>pugl_win.cpp</in>
+              <in>pugl_x11.c</in>
+            </df>
+            <df name="resources">
+            </df>
+            <df name="sofd">
+              <in>libsofd.c</in>
+              <in>libsofd.h</in>
+            </df>
+            <in>Application.cpp</in>
+            <in>ApplicationPrivateData.hpp</in>
+            <in>Cairo.cpp</in>
+            <in>Color.cpp</in>
+            <in>Common.hpp</in>
+            <in>Geometry.cpp</in>
+            <in>Image.cpp</in>
+            <in>ImageBase.cpp</in>
+            <in>ImageWidgets.cpp</in>
+            <in>NanoVG.cpp</in>
+            <in>OpenGL.cpp</in>
+            <in>Resources.cpp</in>
+            <in>Resources.hpp</in>
+            <in>Widget.cpp</in>
+            <in>WidgetPrivateData.cpp</in>
+            <in>WidgetPrivateData.hpp</in>
+            <in>Window.cpp</in>
+          </df>
+          <in>Application.hpp</in>
+          <in>Base.hpp</in>
+          <in>Cairo.hpp</in>
+          <in>Color.hpp</in>
+          <in>Geometry.hpp</in>
+          <in>Image.hpp</in>
+          <in>ImageBase.hpp</in>
+          <in>ImageWidgets.hpp</in>
+          <in>NanoVG.hpp</in>
+          <in>OpenGL.hpp</in>
+          <in>StandaloneWindow.hpp</in>
+          <in>Widget.hpp</in>
+          <in>Window.hpp</in>
+        </df>
+        <df name="distrho">
+          <df name="extra">
+            <in>Base64.hpp</in>
+            <in>ExternalWindow.hpp</in>
+            <in>LeakDetector.hpp</in>
+            <in>Mutex.hpp</in>
+            <in>ScopedPointer.hpp</in>
+            <in>Sleep.hpp</in>
+            <in>String.hpp</in>
+            <in>Thread.hpp</in>
+          </df>
+          <df name="src">
+            <df name="dssi">
+              <in>dssi.h</in>
+              <in>seq_event-compat.h</in>
+            </df>
+            <df name="ladspa">
+              <in>ladspa.h</in>
+            </df>
+            <df name="lv2">
+              <in>atom-forge.h</in>
+              <in>atom-helpers.h</in>
+              <in>atom-util.h</in>
+              <in>atom.h</in>
+              <in>buf-size.h</in>
+              <in>data-access.h</in>
+              <in>dynmanifest.h</in>
+              <in>event-helpers.h</in>
+              <in>event.h</in>
+              <in>instance-access.h</in>
+              <in>log.h</in>
+              <in>logger.h</in>
+              <in>lv2-midifunctions.h</in>
+              <in>lv2-miditype.h</in>
+              <in>lv2.h</in>
+              <in>lv2_external_ui.h</in>
+              <in>lv2_kxstudio_properties.h</in>
+              <in>lv2_programs.h</in>
+              <in>lv2_rtmempool.h</in>
+              <in>midi.h</in>
+              <in>morph.h</in>
+              <in>options.h</in>
+              <in>parameters.h</in>
+              <in>patch.h</in>
+              <in>port-groups.h</in>
+              <in>port-props.h</in>
+              <in>presets.h</in>
+              <in>resize-port.h</in>
+              <in>state.h</in>
+              <in>time.h</in>
+              <in>ui.h</in>
+              <in>units.h</in>
+              <in>uri-map.h</in>
+              <in>urid.h</in>
+              <in>worker.h</in>
+            </df>
+            <df name="vestige">
+              <in>vestige.h</in>
+            </df>
+            <in>DistrhoDefines.h</in>
+            <in>DistrhoPlugin.cpp</in>
+            <in>DistrhoPluginCarla.cpp</in>
+            <in>DistrhoPluginChecks.h</in>
+            <in>DistrhoPluginInternal.hpp</in>
+            <in>DistrhoPluginJack.cpp</in>
+            <in>DistrhoPluginLADSPA+DSSI.cpp</in>
+            <in>DistrhoPluginLV2.cpp</in>
+            <in>DistrhoPluginLV2export.cpp</in>
+            <in>DistrhoPluginVST.cpp</in>
+            <in>DistrhoUI.cpp</in>
+            <in>DistrhoUIDSSI.cpp</in>
+            <in>DistrhoUIInternal.hpp</in>
+            <in>DistrhoUILV2.cpp</in>
+          </df>
+          <in>DistrhoInfo.hpp</in>
+          <in>DistrhoPlugin.hpp</in>
+          <in>DistrhoPluginMain.cpp</in>
+          <in>DistrhoPluginUtils.hpp</in>
+          <in>DistrhoUI.hpp</in>
+          <in>DistrhoUIMain.cpp</in>
+          <in>DistrhoUtils.hpp</in>
+        </df>
+        <df name="examples">
+          <df name="CairoUI">
+            <in>CairoExamplePlugin.cpp</in>
+            <in>CairoExampleUI.cpp</in>
+            <in>DemoWidgetBanner.cpp</in>
+            <in>DemoWidgetBanner.hpp</in>
+            <in>DemoWidgetClickable.cpp</in>
+            <in>DemoWidgetClickable.hpp</in>
+            <in>DistrhoPluginInfo.h</in>
+          </df>
+          <df name="ExternalUI">
+            <in>DistrhoPluginInfo.h</in>
+            <in>ExternalExamplePlugin.cpp</in>
+            <in>ExternalExampleUI.cpp</in>
+          </df>
+          <df name="Info">
+            <df name="modgui">
+            </df>
+            <in>DistrhoPluginInfo.h</in>
+            <in>InfoExamplePlugin.cpp</in>
+            <in>InfoExampleUI.cpp</in>
+          </df>
+          <df name="Latency">
+            <in>DistrhoPluginInfo.h</in>
+            <in>LatencyExamplePlugin.cpp</in>
+          </df>
+          <df name="Meters">
+            <in>DistrhoPluginInfo.h</in>
+            <in>ExamplePluginMeters.cpp</in>
+            <in>ExampleUIMeters.cpp</in>
+          </df>
+          <df name="MidiThrough">
+            <in>DistrhoPluginInfo.h</in>
+            <in>MidiThroughExamplePlugin.cpp</in>
+          </df>
+          <df name="Parameters">
+            <in>DistrhoPluginInfo.h</in>
+            <in>ExamplePluginParameters.cpp</in>
+            <in>ExampleUIParameters.cpp</in>
+          </df>
+          <df name="States">
+            <in>DistrhoPluginInfo.h</in>
+            <in>ExamplePluginStates.cpp</in>
+            <in>ExampleUIStates.cpp</in>
+          </df>
+        </df>
+        <df name="lac">
+        </df>
+        <df name="utils">
+          <df name="lv2-ttl-generator">
+            <in>lv2_ttl_generator.c</in>
+          </df>
+          <df name="plugin.vst">
+            <df name="Contents">
+              <df name="MacOS">
+              </df>
+              <df name="Resources">
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="lib">
+        <df name="dpf">
+          <df name="dgl">
+            <df name="src">
+              <df name="nanovg">
+                <in>nanovg.c</in>
+              </df>
+              <df name="pugl">
+                <in>pugl_haiku.cpp</in>
+                <in>pugl_osx.m</in>
+                <in>pugl_win.cpp</in>
+                <in>pugl_x11.c</in>
+              </df>
+              <df name="sofd">
+                <in>libsofd.c</in>
+              </df>
+              <in>Application.cpp</in>
+              <in>Cairo.cpp</in>
+              <in>Color.cpp</in>
+              <in>Geometry.cpp</in>
+              <in>Image.cpp</in>
+              <in>ImageBase.cpp</in>
+              <in>ImageWidgets.cpp</in>
+              <in>NanoVG.cpp</in>
+              <in>OpenGL.cpp</in>
+              <in>Resources.cpp</in>
+              <in>Widget.cpp</in>
+              <in>WidgetPrivateData.cpp</in>
+              <in>Window.cpp</in>
+            </df>
+          </df>
+          <df name="distrho">
+            <df name="src">
+              <in>DistrhoPlugin.cpp</in>
+              <in>DistrhoPluginCarla.cpp</in>
+              <in>DistrhoPluginJack.cpp</in>
+              <in>DistrhoPluginLADSPA+DSSI.cpp</in>
+              <in>DistrhoPluginLV2.cpp</in>
+              <in>DistrhoPluginLV2export.cpp</in>
+              <in>DistrhoPluginVST.cpp</in>
+              <in>DistrhoUI.cpp</in>
+              <in>DistrhoUIDSSI.cpp</in>
+              <in>DistrhoUILV2.cpp</in>
+            </df>
+            <in>DistrhoPluginMain.cpp</in>
+            <in>DistrhoUIMain.cpp</in>
+          </df>
+          <df name="examples">
+            <df name="CairoUI">
+              <in>CairoExamplePlugin.cpp</in>
+              <in>CairoExampleUI.cpp</in>
+              <in>DemoWidgetBanner.cpp</in>
+              <in>DemoWidgetClickable.cpp</in>
+            </df>
+            <df name="ExternalUI">
+              <in>ExternalExamplePlugin.cpp</in>
+              <in>ExternalExampleUI.cpp</in>
+            </df>
+            <df name="Info">
+              <in>InfoExamplePlugin.cpp</in>
+              <in>InfoExampleUI.cpp</in>
+            </df>
+            <df name="Latency">
+              <in>LatencyExamplePlugin.cpp</in>
+            </df>
+            <df name="Meters">
+              <in>ExamplePluginMeters.cpp</in>
+              <in>ExampleUIMeters.cpp</in>
+            </df>
+            <df name="MidiThrough">
+              <in>MidiThroughExamplePlugin.cpp</in>
+            </df>
+            <df name="Parameters">
+              <in>ExamplePluginParameters.cpp</in>
+              <in>ExampleUIParameters.cpp</in>
+            </df>
+            <df name="States">
+              <in>ExamplePluginStates.cpp</in>
+              <in>ExampleUIStates.cpp</in>
+            </df>
+          </df>
+          <df name="utils">
+            <df name="lv2-ttl-generator">
+              <in>lv2_ttl_generator.c</in>
+            </df>
+          </df>
+        </df>
+        <df name="vstgui">
+          <df name="vstgui">
+            <df name="contrib">
+              <in>ciboxblurfilter.mm</in>
+              <in>keyboardview.cpp</in>
+            </df>
+            <df name="lib">
+              <df name="animation">
+                <in>animations.cpp</in>
+                <in>animator.cpp</in>
+                <in>timingfunctions.cpp</in>
+              </df>
+              <df name="controls">
+                <in>cautoanimation.cpp</in>
+                <in>cbuttons.cpp</in>
+                <in>ccolorchooser.cpp</in>
+                <in>ccontrol.cpp</in>
+                <in>cfontchooser.cpp</in>
+                <in>cknob.cpp</in>
+                <in>clistcontrol.cpp</in>
+                <in>cmoviebitmap.cpp</in>
+                <in>cmoviebutton.cpp</in>
+                <in>coptionmenu.cpp</in>
+                <in>cparamdisplay.cpp</in>
+                <in>cscrollbar.cpp</in>
+                <in>csearchtextedit.cpp</in>
+                <in>csegmentbutton.cpp</in>
+                <in>cslider.cpp</in>
+                <in>cspecialdigit.cpp</in>
+                <in>csplashscreen.cpp</in>
+                <in>cstringlist.cpp</in>
+                <in>cswitch.cpp</in>
+                <in>ctextedit.cpp</in>
+                <in>ctextlabel.cpp</in>
+                <in>cvumeter.cpp</in>
+                <in>cxypad.cpp</in>
+              </df>
+              <df name="platform">
+                <df name="common">
+                  <in>fileresourceinputstream.cpp</in>
+                  <in>genericoptionmenu.cpp</in>
+                  <in>generictextedit.cpp</in>
+                </df>
+                <df name="linux">
+                  <in>cairobitmap.cpp</in>
+                  <in>cairocontext.cpp</in>
+                  <in>cairofont.cpp</in>
+                  <in>cairogradient.cpp</in>
+                  <in>cairopath.cpp</in>
+                  <in>linuxstring.cpp</in>
+                  <in>x11fileselector.cpp</in>
+                  <in>x11frame.cpp</in>
+                  <in>x11platform.cpp</in>
+                  <in>x11timer.cpp</in>
+                  <in>x11utils.cpp</in>
+                </df>
+                <df name="mac">
+                  <df name="carbon">
+                    <in>hiviewframe.cpp</in>
+                    <in>hiviewoptionmenu.cpp</in>
+                    <in>hiviewtextedit.cpp</in>
+                  </df>
+                  <df name="cocoa">
+                    <in>autoreleasepool.mm</in>
+                    <in>cocoahelpers.mm</in>
+                    <in>cocoaopenglview.mm</in>
+                    <in>cocoatextedit.mm</in>
+                    <in>nsviewdraggingsession.mm</in>
+                    <in>nsviewframe.mm</in>
+                    <in>nsviewoptionmenu.mm</in>
+                  </df>
+                  <df name="ios">
+                    <in>uiopenglview.mm</in>
+                    <in>uitextedit.mm</in>
+                    <in>uiviewframe.mm</in>
+                  </df>
+                  <in>caviewlayer.mm</in>
+                  <in>cfontmac.mm</in>
+                  <in>cgbitmap.cpp</in>
+                  <in>cgdrawcontext.cpp</in>
+                  <in>macclipboard.mm</in>
+                  <in>macfileselector.mm</in>
+                  <in>macglobals.cpp</in>
+                  <in>macstring.mm</in>
+                  <in>mactimer.cpp</in>
+                  <in>quartzgraphicspath.cpp</in>
+                </df>
+                <df name="win32">
+                  <df name="direct2d">
+                    <in>d2dbitmap.cpp</in>
+                    <in>d2ddrawcontext.cpp</in>
+                    <in>d2dfont.cpp</in>
+                    <in>d2dgraphicspath.cpp</in>
+                  </df>
+                  <in>win32datapackage.cpp</in>
+                  <in>win32dragging.cpp</in>
+                  <in>win32frame.cpp</in>
+                  <in>win32openglview.cpp</in>
+                  <in>win32optionmenu.cpp</in>
+                  <in>win32support.cpp</in>
+                  <in>win32textedit.cpp</in>
+                  <in>winfileselector.cpp</in>
+                  <in>winstring.cpp</in>
+                  <in>wintimer.cpp</in>
+                </df>
+              </df>
+              <in>cbitmap.cpp</in>
+              <in>cbitmapfilter.cpp</in>
+              <in>ccolor.cpp</in>
+              <in>cdatabrowser.cpp</in>
+              <in>cdrawcontext.cpp</in>
+              <in>cdrawmethods.cpp</in>
+              <in>cdropsource.cpp</in>
+              <in>cfileselector.cpp</in>
+              <in>cfont.cpp</in>
+              <in>cframe.cpp</in>
+              <in>cgradientview.cpp</in>
+              <in>cgraphicspath.cpp</in>
+              <in>clayeredviewcontainer.cpp</in>
+              <in>clinestyle.cpp</in>
+              <in>coffscreencontext.cpp</in>
+              <in>copenglview.cpp</in>
+              <in>cpoint.cpp</in>
+              <in>crect.cpp</in>
+              <in>crowcolumnview.cpp</in>
+              <in>cscrollview.cpp</in>
+              <in>cshadowviewcontainer.cpp</in>
+              <in>csplitview.cpp</in>
+              <in>cstring.cpp</in>
+              <in>ctabview.cpp</in>
+              <in>ctooltipsupport.cpp</in>
+              <in>cview.cpp</in>
+              <in>cviewcontainer.cpp</in>
+              <in>cvstguitimer.cpp</in>
+              <in>genericstringlistdatabrowsersource.cpp</in>
+              <in>vstguidebug.cpp</in>
+            </df>
+            <df name="plugin-bindings">
+              <in>aeffguieditor.cpp</in>
+              <in>plugguieditor.cpp</in>
+              <in>vst3editor.cpp</in>
+              <in>vst3groupcontroller.cpp</in>
+              <in>vst3padcontroller.cpp</in>
+            </df>
+            <df name="standalone">
+              <df name="examples">
+                <df name="mandelbrot">
+                  <df name="source">
+                    <in>mandelbrotapp.cpp</in>
+                    <in>mandelbrotview.cpp</in>
+                    <in>mandelbrotwindow.cpp</in>
+                    <in>progressindicatorview.cpp</in>
+                    <in>touchbarsupport.mm</in>
+                  </df>
+                </df>
+                <df name="simple_standalone">
+                  <df name="source">
+                    <in>myapp.cpp</in>
+                  </df>
+                </df>
+                <df name="standalone">
+                  <df name="source">
+                    <in>AlertBoxDesign.cpp</in>
+                    <in>testabout.cpp</in>
+                    <in>testappdelegate.cpp</in>
+                    <in>testmodel.cpp</in>
+                  </df>
+                </df>
+              </df>
+              <df name="source">
+                <df name="helpers">
+                  <in>value.cpp</in>
+                </df>
+                <df name="platform">
+                  <df name="gdk">
+                    <in>gdkapplication.cpp</in>
+                    <in>gdkasync.cpp</in>
+                    <in>gdkcommondirectories.cpp</in>
+                    <in>gdkpreference.cpp</in>
+                    <in>gdkrunloop.cpp</in>
+                    <in>gdkwindow.cpp</in>
+                  </df>
+                  <df name="mac">
+                    <in>VSTGUICommand.mm</in>
+                    <in>macapplication.mm</in>
+                    <in>macasync.mm</in>
+                    <in>maccommondirectories.mm</in>
+                    <in>macpreference.mm</in>
+                    <in>macwindow.mm</in>
+                  </df>
+                  <df name="win32">
+                    <in>win32application.cpp</in>
+                    <in>win32async.cpp</in>
+                    <in>win32commondirectories.cpp</in>
+                    <in>win32menu.cpp</in>
+                    <in>win32preference.cpp</in>
+                    <in>win32window.cpp</in>
+                  </df>
+                </df>
+                <in>application.cpp</in>
+                <in>genericalertbox.cpp</in>
+                <in>shareduiresources.cpp</in>
+                <in>uidescriptionwindowcontroller.cpp</in>
+                <in>window.cpp</in>
+              </df>
+            </df>
+            <df name="tests">
+              <df name="base64codecspeed">
+                <in>main.cpp</in>
+              </df>
+              <df name="gfxtest">
+                <df name="source">
+                  <in>app.cpp</in>
+                  <in>drawdevicetests.cpp</in>
+                </df>
+              </df>
+              <df name="ios standalone">
+                <df name="iOS Standalone">
+                  <in>AppDelegate.mm</in>
+                  <in>ViewController.mm</in>
+                  <in>main.m</in>
+                </df>
+              </df>
+              <df name="uidescription vst3">
+                <df name="source">
+                  <in>animationtest.cpp</in>
+                  <in>edituidescriptioneditor.cpp</in>
+                  <in>factory.cpp</in>
+                  <in>graphicstest.cpp</in>
+                  <in>openglviewtest.cpp</in>
+                  <in>subcontrollertest.cpp</in>
+                  <in>uidescription test.cpp</in>
+                  <in>vst3sdksources.cpp</in>
+                  <in>zoomtest.cpp</in>
+                </df>
+              </df>
+              <df name="uidescriptioneditorapp">
+                <df name="source">
+                  <in>app.cpp</in>
+                </df>
+              </df>
+              <df name="unittest">
+                <df name="lib">
+                  <df name="animation">
+                    <in>animations_test.cpp</in>
+                    <in>animator_test.cpp</in>
+                    <in>timingfunction_tests.cpp</in>
+                  </df>
+                  <df name="controls">
+                    <in>ccheckbox_test.cpp</in>
+                    <in>ccontrol_test.cpp</in>
+                    <in>ckickbutton_test.cpp</in>
+                    <in>clistcontrol_test.cpp</in>
+                    <in>conoffbutton_test.cpp</in>
+                    <in>csegmentbutton_test.cpp</in>
+                    <in>ctextbutton_test.cpp</in>
+                    <in>cxypad_test.cpp</in>
+                  </df>
+                  <in>cbitmap_test.cpp</in>
+                  <in>cbuttonstate_test.cpp</in>
+                  <in>ccolor_test.cpp</in>
+                  <in>cfont_test.cpp</in>
+                  <in>cframe_test.cpp</in>
+                  <in>clinestyle_test.cpp</in>
+                  <in>cpoint_test.cpp</in>
+                  <in>crect_test.cpp</in>
+                  <in>csplitview_test.cpp</in>
+                  <in>cview_test.cpp</in>
+                  <in>cviewcontainer_test.cpp</in>
+                  <in>idependency_test.cpp</in>
+                  <in>platform_helper_linux.cpp</in>
+                  <in>platform_helper_mac.mm</in>
+                  <in>platform_helper_win32.cpp</in>
+                  <in>utf8string_test.cpp</in>
+                  <in>utf8stringview_test.cpp</in>
+                </df>
+                <df name="uidescription">
+                  <df name="uiviewcreator">
+                    <in>canimationsplashscreencreator_test.cpp</in>
+                    <in>canimknobcreator_test.cpp</in>
+                    <in>ccheckboxcreator_test.cpp</in>
+                    <in>ccontrolcreator_test.cpp</in>
+                    <in>cgradientviewcreator_test.cpp</in>
+                    <in>chorizontalswitchcreator_test.cpp</in>
+                    <in>ckickbuttoncreator_test.cpp</in>
+                    <in>cknobcreator_test.cpp</in>
+                    <in>clayeredviewcontainercreator_test.cpp</in>
+                    <in>cmoviebitmapcreator_test.cpp</in>
+                    <in>cmoviebuttoncreator_test.cpp</in>
+                    <in>cmultilinetextlabelcreator_test.cpp</in>
+                    <in>conoffbuttoncreator_test.cpp</in>
+                    <in>coptionmenucreator_test.cpp</in>
+                    <in>cparamdisplaycreator_test.cpp</in>
+                    <in>crockerswitchcreator_test.cpp</in>
+                    <in>crowcolumnviewcreator_test.cpp</in>
+                    <in>cscrollviewcreator_test.cpp</in>
+                    <in>csearchtexteditcreator_test.cpp</in>
+                    <in>csegmentbuttoncreator_test.cpp</in>
+                    <in>cshadowviewcontainercreator_test.cpp</in>
+                    <in>cslidercreator_test.cpp</in>
+                    <in>csplitviewcreator_test.cpp</in>
+                    <in>ctextbuttoncreator_test.cpp</in>
+                    <in>ctexteditcreator_test.cpp</in>
+                    <in>ctextlabelcreator_test.cpp</in>
+                    <in>cverticalswitchcreator_test.cpp</in>
+                    <in>cviewcontainercreator_test.cpp</in>
+                    <in>cviewcreator_test.cpp</in>
+                    <in>cvumetercreator_test.cpp</in>
+                    <in>cxypadcreator_test.cpp</in>
+                    <in>stringlistcreator_test.cpp</in>
+                    <in>uiviewcreator_test.cpp</in>
+                    <in>uiviewswitchcontainercreator_test.cpp</in>
+                  </df>
+                  <in>base64codec.cpp</in>
+                  <in>cstream_test.cpp</in>
+                  <in>delegationcontroller_test.cpp</in>
+                  <in>uiattributes_test.cpp</in>
+                  <in>uidescription_test.cpp</in>
+                  <in>uiviewfactory_test.cpp</in>
+                  <in>uiviewswitchcontainer_test.cpp</in>
+                  <in>xmlparser_test.cpp</in>
+                </df>
+                <in>unittests.cpp</in>
+              </df>
+            </df>
+            <df name="tools">
+              <df name="imagestitcher">
+                <df name="source">
+                  <in>app.cpp</in>
+                  <in>document.cpp</in>
+                  <in>documentcontroller.cpp</in>
+                  <in>imageframesview.cpp</in>
+                  <in>startupcontroller.cpp</in>
+                </df>
+              </df>
+              <df name="uidesccompressor">
+                <in>main.cpp</in>
+              </df>
+            </df>
+            <df name="uidescription">
+              <df name="editing">
+                <in>uiactions.cpp</in>
+                <in>uiattributescontroller.cpp</in>
+                <in>uibitmapscontroller.cpp</in>
+                <in>uicolor.cpp</in>
+                <in>uicolorchoosercontroller.cpp</in>
+                <in>uicolorscontroller.cpp</in>
+                <in>uicolorslider.cpp</in>
+                <in>uicrosslines.cpp</in>
+                <in>uidialogcontroller.cpp</in>
+                <in>uieditcontroller.cpp</in>
+                <in>uieditmenucontroller.cpp</in>
+                <in>uieditview.cpp</in>
+                <in>uifocussettingscontroller.cpp</in>
+                <in>uifontscontroller.cpp</in>
+                <in>uigradientscontroller.cpp</in>
+                <in>uigridcontroller.cpp</in>
+                <in>uioverlayview.cpp</in>
+                <in>uiselection.cpp</in>
+                <in>uitagscontroller.cpp</in>
+                <in>uitemplatecontroller.cpp</in>
+                <in>uitemplatesettingscontroller.cpp</in>
+                <in>uiundomanager.cpp</in>
+                <in>uiviewcreatecontroller.cpp</in>
+              </df>
+              <df name="expat">
+                <in>xmlparse.c</in>
+                <in>xmlrole.c</in>
+                <in>xmltok.c</in>
+                <in>xmltok_impl.c</in>
+                <in>xmltok_ns.c</in>
+              </df>
+              <df name="miniz">
+                <in>miniz.c</in>
+              </df>
+              <df name="viewcreator">
+                <in>animationsplashscreencreator.cpp</in>
+                <in>animknobcreator.cpp</in>
+                <in>checkboxcreator.cpp</in>
+                <in>controlcreator.cpp</in>
+                <in>gradientviewcreator.cpp</in>
+                <in>kickbuttoncreator.cpp</in>
+                <in>knobcreator.cpp</in>
+                <in>layeredviewcontainercreator.cpp</in>
+                <in>moviebitmapcreator.cpp</in>
+                <in>moviebuttoncreator.cpp</in>
+                <in>multibitmapcontrolcreator.cpp</in>
+                <in>multilinetextlabelcreator.cpp</in>
+                <in>onoffbuttoncreator.cpp</in>
+                <in>optionmenucreator.cpp</in>
+                <in>paramdisplaycreator.cpp</in>
+                <in>rockerswitchcreator.cpp</in>
+                <in>rowcolumnviewcreator.cpp</in>
+                <in>scrollviewcreator.cpp</in>
+                <in>searchtexteditcreator.cpp</in>
+                <in>segmentbuttoncreator.cpp</in>
+                <in>shadowviewcontainercreator.cpp</in>
+                <in>sliderviewcreator.cpp</in>
+                <in>splitviewcreator.cpp</in>
+                <in>stringlistcontrolcreator.cpp</in>
+                <in>switchcreators.cpp</in>
+                <in>textbuttoncreator.cpp</in>
+                <in>texteditcreator.cpp</in>
+                <in>textlabelcreator.cpp</in>
+                <in>uiviewswitchcontainercreator.cpp</in>
+                <in>viewcontainercreator.cpp</in>
+                <in>viewcreator.cpp</in>
+                <in>vumetercreator.cpp</in>
+                <in>xypadcreator.cpp</in>
+              </df>
+              <in>compresseduidescription.cpp</in>
+              <in>cstream.cpp</in>
+              <in>uiattributes.cpp</in>
+              <in>uidescription.cpp</in>
+              <in>uiviewcreator.cpp</in>
+              <in>uiviewfactory.cpp</in>
+              <in>uiviewswitchcontainer.cpp</in>
+              <in>xmlparser.cpp</in>
+            </df>
+            <in>vstgui.cpp</in>
+            <in>vstgui_ios.mm</in>
+            <in>vstgui_linux.cpp</in>
+            <in>vstgui_mac.mm</in>
+            <in>vstgui_standalone.cpp</in>
+            <in>vstgui_standalone_mac.mm</in>
+            <in>vstgui_standalone_win32.cpp</in>
+            <in>vstgui_uidescription.cpp</in>
+            <in>vstgui_uidescription_ios.mm</in>
+            <in>vstgui_uidescription_mac.mm</in>
+            <in>vstgui_uidescription_win32.cpp</in>
+            <in>vstgui_win32.cpp</in>
+          </df>
+        </df>
+      </df>
+      <df name="plugins">
+        <df name="MVerb">
+          <df name="artwork">
+          </df>
+          <in>DistrhoArtworkMVerb.cpp</in>
+          <in>DistrhoArtworkMVerb.hpp</in>
+          <in>DistrhoPluginInfo.h</in>
+          <in>DistrhoPluginMVerb.cpp</in>
+          <in>DistrhoPluginMVerb.hpp</in>
+          <in>DistrhoUIMVerb.cpp</in>
+          <in>DistrhoUIMVerb.hpp</in>
+          <in>MVerb.h</in>
+        </df>
+      </df>
+      <df name="tmp">
+        <df name="MVerb">
+          <df name="dpf">
+          </df>
+          <df name="plugins">
+          </df>
+        </df>
+      </df>
+      <df name="vstgui">
+        <df name="vstgui">
+          <df name=".vscode">
+          </df>
+          <df name="contrib">
+            <in>ciboxblurfilter.h</in>
+            <in>ciboxblurfilter.mm</in>
+            <in>keyboardview.cpp</in>
+            <in>keyboardview.h</in>
+          </df>
+          <df name="Documentation">
+          </df>
+          <df name="doxygen">
+            <df name="screenshots">
+            </df>
+            <in>doc.h</in>
+            <in>page_changelog.h</in>
+            <in>page_changes.h</in>
+            <in>page_keyeventflow.h</in>
+            <in>page_license.h</in>
+          </df>
+          <df name="lib">
+            <df name="animation">
+              <in>animations.cpp</in>
+              <in>animations.h</in>
+              <in>animator.cpp</in>
+              <in>animator.h</in>
+              <in>ianimationtarget.h</in>
+              <in>itimingfunction.h</in>
+              <in>timingfunctions.cpp</in>
+              <in>timingfunctions.h</in>
+            </df>
+            <df name="controls">
+              <in>cautoanimation.cpp</in>
+              <in>cautoanimation.h</in>
+              <in>cbuttons.cpp</in>
+              <in>cbuttons.h</in>
+              <in>ccolorchooser.cpp</in>
+              <in>ccolorchooser.h</in>
+              <in>ccontrol.cpp</in>
+              <in>ccontrol.h</in>
+              <in>cfontchooser.cpp</in>
+              <in>cfontchooser.h</in>
+              <in>cknob.cpp</in>
+              <in>cknob.h</in>
+              <in>clistcontrol.cpp</in>
+              <in>clistcontrol.h</in>
+              <in>cmoviebitmap.cpp</in>
+              <in>cmoviebitmap.h</in>
+              <in>cmoviebutton.cpp</in>
+              <in>cmoviebutton.h</in>
+              <in>coptionmenu.cpp</in>
+              <in>coptionmenu.h</in>
+              <in>cparamdisplay.cpp</in>
+              <in>cparamdisplay.h</in>
+              <in>cscrollbar.cpp</in>
+              <in>cscrollbar.h</in>
+              <in>csearchtextedit.cpp</in>
+              <in>csearchtextedit.h</in>
+              <in>csegmentbutton.cpp</in>
+              <in>csegmentbutton.h</in>
+              <in>cslider.cpp</in>
+              <in>cslider.h</in>
+              <in>cspecialdigit.cpp</in>
+              <in>cspecialdigit.h</in>
+              <in>csplashscreen.cpp</in>
+              <in>csplashscreen.h</in>
+              <in>cstringlist.cpp</in>
+              <in>cstringlist.h</in>
+              <in>cswitch.cpp</in>
+              <in>cswitch.h</in>
+              <in>ctextedit.cpp</in>
+              <in>ctextedit.h</in>
+              <in>ctextlabel.cpp</in>
+              <in>ctextlabel.h</in>
+              <in>cvumeter.cpp</in>
+              <in>cvumeter.h</in>
+              <in>cxypad.cpp</in>
+              <in>cxypad.h</in>
+              <in>icommandmenuitemtarget.h</in>
+              <in>icontrollistener.h</in>
+              <in>ioptionmenulistener.h</in>
+              <in>itextlabellistener.h</in>
+            </df>
+            <df name="platform">
+              <df name="common">
+                <in>fileresourceinputstream.cpp</in>
+                <in>fileresourceinputstream.h</in>
+                <in>genericoptionmenu.cpp</in>
+                <in>genericoptionmenu.h</in>
+                <in>generictextedit.cpp</in>
+                <in>generictextedit.h</in>
+                <in>stb_textedit.h</in>
+              </df>
+              <df name="linux">
+                <in>cairobitmap.cpp</in>
+                <in>cairobitmap.h</in>
+                <in>cairocontext.cpp</in>
+                <in>cairocontext.h</in>
+                <in>cairofont.cpp</in>
+                <in>cairofont.h</in>
+                <in>cairogradient.cpp</in>
+                <in>cairogradient.h</in>
+                <in>cairopath.cpp</in>
+                <in>cairopath.h</in>
+                <in>cairoutils.h</in>
+                <in>irunloop.h</in>
+                <in>linuxstring.cpp</in>
+                <in>linuxstring.h</in>
+                <in>x11fileselector.cpp</in>
+                <in>x11frame.cpp</in>
+                <in>x11frame.h</in>
+                <in>x11platform.cpp</in>
+                <in>x11platform.h</in>
+                <in>x11timer.cpp</in>
+                <in>x11timer.h</in>
+                <in>x11utils.cpp</in>
+                <in>x11utils.h</in>
+              </df>
+              <df name="mac">
+                <df name="carbon">
+                  <in>hiviewframe.cpp</in>
+                  <in>hiviewframe.h</in>
+                  <in>hiviewoptionmenu.cpp</in>
+                  <in>hiviewoptionmenu.h</in>
+                  <in>hiviewtextedit.cpp</in>
+                  <in>hiviewtextedit.h</in>
+                </df>
+                <df name="cocoa">
+                  <in>autoreleasepool.h</in>
+                  <in>autoreleasepool.mm</in>
+                  <in>cocoahelpers.h</in>
+                  <in>cocoahelpers.mm</in>
+                  <in>cocoaopenglview.h</in>
+                  <in>cocoaopenglview.mm</in>
+                  <in>cocoatextedit.h</in>
+                  <in>cocoatextedit.mm</in>
+                  <in>nsviewdraggingsession.h</in>
+                  <in>nsviewdraggingsession.mm</in>
+                  <in>nsviewframe.h</in>
+                  <in>nsviewframe.mm</in>
+                  <in>nsviewoptionmenu.h</in>
+                  <in>nsviewoptionmenu.mm</in>
+                </df>
+                <df name="ios">
+                  <in>uiopenglview.h</in>
+                  <in>uiopenglview.mm</in>
+                  <in>uitextedit.h</in>
+                  <in>uitextedit.mm</in>
+                  <in>uitouchevent.h</in>
+                  <in>uiviewframe.h</in>
+                  <in>uiviewframe.mm</in>
+                </df>
+                <in>caviewlayer.h</in>
+                <in>caviewlayer.mm</in>
+                <in>cfontmac.h</in>
+                <in>cfontmac.mm</in>
+                <in>cgbitmap.cpp</in>
+                <in>cgbitmap.h</in>
+                <in>cgdrawcontext.cpp</in>
+                <in>cgdrawcontext.h</in>
+                <in>macclipboard.h</in>
+                <in>macclipboard.mm</in>
+                <in>macfileselector.mm</in>
+                <in>macglobals.cpp</in>
+                <in>macglobals.h</in>
+                <in>macstring.h</in>
+                <in>macstring.mm</in>
+                <in>mactimer.cpp</in>
+                <in>quartzgraphicspath.cpp</in>
+                <in>quartzgraphicspath.h</in>
+              </df>
+              <df name="win32">
+                <df name="direct2d">
+                  <in>d2dbitmap.cpp</in>
+                  <in>d2dbitmap.h</in>
+                  <in>d2ddrawcontext.cpp</in>
+                  <in>d2ddrawcontext.h</in>
+                  <in>d2dfont.cpp</in>
+                  <in>d2dfont.h</in>
+                  <in>d2dgraphicspath.cpp</in>
+                  <in>d2dgraphicspath.h</in>
+                </df>
+                <in>comptr.h</in>
+                <in>win32bitmapbase.h</in>
+                <in>win32datapackage.cpp</in>
+                <in>win32datapackage.h</in>
+                <in>win32dll.h</in>
+                <in>win32dragging.cpp</in>
+                <in>win32dragging.h</in>
+                <in>win32frame.cpp</in>
+                <in>win32frame.h</in>
+                <in>win32openglview.cpp</in>
+                <in>win32openglview.h</in>
+                <in>win32optionmenu.cpp</in>
+                <in>win32optionmenu.h</in>
+                <in>win32support.cpp</in>
+                <in>win32support.h</in>
+                <in>win32textedit.cpp</in>
+                <in>win32textedit.h</in>
+                <in>winfileselector.cpp</in>
+                <in>winstring.cpp</in>
+                <in>winstring.h</in>
+                <in>wintimer.cpp</in>
+              </df>
+              <in>iplatformbitmap.h</in>
+              <in>iplatformfont.h</in>
+              <in>iplatformframe.h</in>
+              <in>iplatformframecallback.h</in>
+              <in>iplatformopenglview.h</in>
+              <in>iplatformoptionmenu.h</in>
+              <in>iplatformresourceinputstream.h</in>
+              <in>iplatformstring.h</in>
+              <in>iplatformtextedit.h</in>
+              <in>iplatformtimer.h</in>
+              <in>iplatformviewlayer.h</in>
+              <in>platform_macos.h</in>
+              <in>platform_win32.h</in>
+              <in>platform_x11.h</in>
+              <in>std_unorderedmap.h</in>
+            </df>
+            <in>algorithm.h</in>
+            <in>cbitmap.cpp</in>
+            <in>cbitmap.h</in>
+            <in>cbitmapfilter.cpp</in>
+            <in>cbitmapfilter.h</in>
+            <in>cbuttonstate.h</in>
+            <in>ccolor.cpp</in>
+            <in>ccolor.h</in>
+            <in>cdatabrowser.cpp</in>
+            <in>cdatabrowser.h</in>
+            <in>cdrawcontext.cpp</in>
+            <in>cdrawcontext.h</in>
+            <in>cdrawdefs.h</in>
+            <in>cdrawmethods.cpp</in>
+            <in>cdrawmethods.h</in>
+            <in>cdropsource.cpp</in>
+            <in>cdropsource.h</in>
+            <in>cfileselector.cpp</in>
+            <in>cfileselector.h</in>
+            <in>cfont.cpp</in>
+            <in>cfont.h</in>
+            <in>cframe.cpp</in>
+            <in>cframe.h</in>
+            <in>cgradient.h</in>
+            <in>cgradientview.cpp</in>
+            <in>cgradientview.h</in>
+            <in>cgraphicspath.cpp</in>
+            <in>cgraphicspath.h</in>
+            <in>cgraphicstransform.h</in>
+            <in>clayeredviewcontainer.cpp</in>
+            <in>clayeredviewcontainer.h</in>
+            <in>clinestyle.cpp</in>
+            <in>clinestyle.h</in>
+            <in>coffscreencontext.cpp</in>
+            <in>coffscreencontext.h</in>
+            <in>copenglview.cpp</in>
+            <in>copenglview.h</in>
+            <in>cpoint.cpp</in>
+            <in>cpoint.h</in>
+            <in>crect.cpp</in>
+            <in>crect.h</in>
+            <in>cresourcedescription.h</in>
+            <in>crowcolumnview.cpp</in>
+            <in>crowcolumnview.h</in>
+            <in>cscrollview.cpp</in>
+            <in>cscrollview.h</in>
+            <in>cshadowviewcontainer.cpp</in>
+            <in>cshadowviewcontainer.h</in>
+            <in>csplitview.cpp</in>
+            <in>csplitview.h</in>
+            <in>cstring.cpp</in>
+            <in>cstring.h</in>
+            <in>ctabview.cpp</in>
+            <in>ctabview.h</in>
+            <in>ctooltipsupport.cpp</in>
+            <in>ctooltipsupport.h</in>
+            <in>cview.cpp</in>
+            <in>cview.h</in>
+            <in>cviewcontainer.cpp</in>
+            <in>cviewcontainer.h</in>
+            <in>cvstguitimer.cpp</in>
+            <in>cvstguitimer.h</in>
+            <in>dispatchlist.h</in>
+            <in>dragging.h</in>
+            <in>genericstringlistdatabrowsersource.cpp</in>
+            <in>genericstringlistdatabrowsersource.h</in>
+            <in>idatabrowserdelegate.h</in>
+            <in>idatapackage.h</in>
+            <in>idependency.h</in>
+            <in>ifocusdrawing.h</in>
+            <in>iscalefactorchangedlistener.h</in>
+            <in>itouchevent.h</in>
+            <in>iviewlistener.h</in>
+            <in>malloc.h</in>
+            <in>optional.h</in>
+            <in>vstguibase.h</in>
+            <in>vstguidebug.cpp</in>
+            <in>vstguidebug.h</in>
+            <in>vstguifwd.h</in>
+            <in>vstkeycode.h</in>
+          </df>
+          <df name="plugin-bindings">
+            <in>aeffguieditor.cpp</in>
+            <in>aeffguieditor.h</in>
+            <in>getpluginbundle.h</in>
+            <in>plugguieditor.cpp</in>
+            <in>plugguieditor.h</in>
+            <in>vst3editor.cpp</in>
+            <in>vst3editor.h</in>
+            <in>vst3groupcontroller.cpp</in>
+            <in>vst3groupcontroller.h</in>
+            <in>vst3padcontroller.cpp</in>
+            <in>vst3padcontroller.h</in>
+          </df>
+          <df name="standalone">
+            <df name="cmake">
+              <df name="modules">
+              </df>
+              <df name="resources">
+              </df>
+            </df>
+            <df name="examples">
+              <df name="mandelbrot">
+                <df name="resource">
+                  <df name="progress">
+                  </df>
+                </df>
+                <df name="source">
+                  <in>mandelbrot.h</in>
+                  <in>mandelbrotapp.cpp</in>
+                  <in>mandelbrotview.cpp</in>
+                  <in>mandelbrotview.h</in>
+                  <in>mandelbrotwindow.cpp</in>
+                  <in>mandelbrotwindow.h</in>
+                  <in>modelbinding.h</in>
+                  <in>progressindicatorview.cpp</in>
+                  <in>touchbarsupport.h</in>
+                  <in>touchbarsupport.mm</in>
+                </df>
+              </df>
+              <df name="simple_standalone">
+                <df name="resource">
+                </df>
+                <df name="source">
+                  <in>myapp.cpp</in>
+                </df>
+              </df>
+              <df name="standalone">
+                <df name="resource">
+                  <df name="font">
+                  </df>
+                </df>
+                <df name="source">
+                  <in>AlertBoxDesign.cpp</in>
+                  <in>AlertBoxDesign.h</in>
+                  <in>testabout.cpp</in>
+                  <in>testabout.h</in>
+                  <in>testappdelegate.cpp</in>
+                  <in>testappdelegate.h</in>
+                  <in>testmodel.cpp</in>
+                  <in>testmodel.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="include">
+              <df name="helpers">
+                <df name="uidesc">
+                  <in>customization.h</in>
+                  <in>modelbinding.h</in>
+                </df>
+                <in>appdelegate.h</in>
+                <in>async.h</in>
+                <in>menubuilder.h</in>
+                <in>preferences.h</in>
+                <in>value.h</in>
+                <in>valuelistener.h</in>
+                <in>windowcontroller.h</in>
+                <in>windowlistener.h</in>
+              </df>
+              <in>appinit.h</in>
+              <in>doc.h</in>
+              <in>fwd.h</in>
+              <in>ialertbox.h</in>
+              <in>iappdelegate.h</in>
+              <in>iapplication.h</in>
+              <in>iasync.h</in>
+              <in>icommand.h</in>
+              <in>icommondirectories.h</in>
+              <in>imenubuilder.h</in>
+              <in>interface.h</in>
+              <in>ipreference.h</in>
+              <in>ishareduiresources.h</in>
+              <in>iuidescwindow.h</in>
+              <in>ivalue.h</in>
+              <in>ivaluelistener.h</in>
+              <in>iwindow.h</in>
+              <in>iwindowcontroller.h</in>
+              <in>iwindowlistener.h</in>
+            </df>
+            <df name="source">
+              <df name="helpers">
+                <in>value.cpp</in>
+              </df>
+              <df name="platform">
+                <df name="gdk">
+                  <in>gdkapplication.cpp</in>
+                  <in>gdkapplication.h</in>
+                  <in>gdkasync.cpp</in>
+                  <in>gdkcommondirectories.cpp</in>
+                  <in>gdkcommondirectories.h</in>
+                  <in>gdkpreference.cpp</in>
+                  <in>gdkpreference.h</in>
+                  <in>gdkrunloop.cpp</in>
+                  <in>gdkrunloop.h</in>
+                  <in>gdkwindow.cpp</in>
+                  <in>gdkwindow.h</in>
+                </df>
+                <df name="mac">
+                  <in>VSTGUICommand.h</in>
+                  <in>VSTGUICommand.mm</in>
+                  <in>macapplication.mm</in>
+                  <in>macasync.h</in>
+                  <in>macasync.mm</in>
+                  <in>maccommondirectories.h</in>
+                  <in>maccommondirectories.mm</in>
+                  <in>macpreference.h</in>
+                  <in>macpreference.mm</in>
+                  <in>macutilities.h</in>
+                  <in>macwindow.h</in>
+                  <in>macwindow.mm</in>
+                </df>
+                <df name="win32">
+                  <in>win32application.cpp</in>
+                  <in>win32async.cpp</in>
+                  <in>win32async.h</in>
+                  <in>win32commondirectories.cpp</in>
+                  <in>win32commondirectories.h</in>
+                  <in>win32menu.cpp</in>
+                  <in>win32menu.h</in>
+                  <in>win32preference.cpp</in>
+                  <in>win32preference.h</in>
+                  <in>win32window.cpp</in>
+                  <in>win32window.h</in>
+                </df>
+                <in>iplatformwindow.h</in>
+              </df>
+              <in>application.cpp</in>
+              <in>application.h</in>
+              <in>genericalertbox.cpp</in>
+              <in>genericalertbox.h</in>
+              <in>shareduiresources.cpp</in>
+              <in>shareduiresources.h</in>
+              <in>uidescriptionwindowcontroller.cpp</in>
+              <in>window.cpp</in>
+              <in>window.h</in>
+            </df>
+          </df>
+          <df name="tests">
+            <df name="base64codecspeed">
+              <in>main.cpp</in>
+            </df>
+            <df name="gfxtest">
+              <df name="resource">
+              </df>
+              <df name="source">
+                <in>app.cpp</in>
+                <in>drawdevicetests.cpp</in>
+                <in>drawdevicetests.h</in>
+              </df>
+            </df>
+            <df name="ios standalone">
+              <df name="iOS Standalone">
+                <df name="Base.lproj">
+                </df>
+                <df name="en.lproj">
+                </df>
+                <in>AppDelegate.h</in>
+                <in>AppDelegate.mm</in>
+                <in>ViewController.h</in>
+                <in>ViewController.mm</in>
+                <in>main.m</in>
+              </df>
+              <df name="iOS Standalone.xcodeproj">
+              </df>
+            </df>
+            <df name="uidescription vst3">
+              <df name="mac">
+                <df name="uidescription test.xcodeproj">
+                </df>
+              </df>
+              <df name="resource">
+                <df name="ZoomExample">
+                </df>
+              </df>
+              <df name="source">
+                <in>animationtest.cpp</in>
+                <in>animationtest.h</in>
+                <in>bitmapsaturator.h</in>
+                <in>edituidescriptioneditor.cpp</in>
+                <in>edituidescriptioneditor.h</in>
+                <in>factory.cpp</in>
+                <in>graphicstest.cpp</in>
+                <in>graphicstest.h</in>
+                <in>openglviewtest.cpp</in>
+                <in>openglviewtest.h</in>
+                <in>prefix.h</in>
+                <in>subcontrollertest.cpp</in>
+                <in>subcontrollertest.h</in>
+                <in>uidescription test.cpp</in>
+                <in>uidescription test.h</in>
+                <in>vst3sdksources.cpp</in>
+                <in>zoomtest.cpp</in>
+                <in>zoomtest.h</in>
+              </df>
+              <df name="win">
+              </df>
+            </df>
+            <df name="uidescriptioneditorapp">
+              <df name="resource">
+              </df>
+              <df name="source">
+                <in>app.cpp</in>
+              </df>
+            </df>
+            <df name="unittest">
+              <df name="lcov">
+              </df>
+              <df name="lib">
+                <df name="animation">
+                  <in>animations_test.cpp</in>
+                  <in>animator_test.cpp</in>
+                  <in>timingfunction_tests.cpp</in>
+                </df>
+                <df name="controls">
+                  <in>ccheckbox_test.cpp</in>
+                  <in>ccontrol_test.cpp</in>
+                  <in>ckickbutton_test.cpp</in>
+                  <in>clistcontrol_test.cpp</in>
+                  <in>conoffbutton_test.cpp</in>
+                  <in>csegmentbutton_test.cpp</in>
+                  <in>ctextbutton_test.cpp</in>
+                  <in>cxypad_test.cpp</in>
+                </df>
+                <in>cbitmap_test.cpp</in>
+                <in>cbuttonstate_test.cpp</in>
+                <in>ccolor_test.cpp</in>
+                <in>cfont_test.cpp</in>
+                <in>cframe_test.cpp</in>
+                <in>clinestyle_test.cpp</in>
+                <in>cpoint_test.cpp</in>
+                <in>crect_test.cpp</in>
+                <in>csplitview_test.cpp</in>
+                <in>cview_test.cpp</in>
+                <in>cviewcontainer_test.cpp</in>
+                <in>idependency_test.cpp</in>
+                <in>platform_helper.h</in>
+                <in>platform_helper_linux.cpp</in>
+                <in>platform_helper_mac.mm</in>
+                <in>platform_helper_win32.cpp</in>
+                <in>utf8string_test.cpp</in>
+                <in>utf8stringview_test.cpp</in>
+              </df>
+              <df name="uidescription">
+                <df name="uiviewcreator">
+                  <in>canimationsplashscreencreator_test.cpp</in>
+                  <in>canimknobcreator_test.cpp</in>
+                  <in>ccheckboxcreator_test.cpp</in>
+                  <in>ccontrolcreator_test.cpp</in>
+                  <in>cgradientviewcreator_test.cpp</in>
+                  <in>chorizontalswitchcreator_test.cpp</in>
+                  <in>ckickbuttoncreator_test.cpp</in>
+                  <in>cknobcreator_test.cpp</in>
+                  <in>clayeredviewcontainercreator_test.cpp</in>
+                  <in>cmoviebitmapcreator_test.cpp</in>
+                  <in>cmoviebuttoncreator_test.cpp</in>
+                  <in>cmultilinetextlabelcreator_test.cpp</in>
+                  <in>conoffbuttoncreator_test.cpp</in>
+                  <in>coptionmenucreator_test.cpp</in>
+                  <in>cparamdisplaycreator_test.cpp</in>
+                  <in>crockerswitchcreator_test.cpp</in>
+                  <in>crowcolumnviewcreator_test.cpp</in>
+                  <in>cscrollviewcreator_test.cpp</in>
+                  <in>csearchtexteditcreator_test.cpp</in>
+                  <in>csegmentbuttoncreator_test.cpp</in>
+                  <in>cshadowviewcontainercreator_test.cpp</in>
+                  <in>cslidercreator_test.cpp</in>
+                  <in>csplitviewcreator_test.cpp</in>
+                  <in>ctextbuttoncreator_test.cpp</in>
+                  <in>ctexteditcreator_test.cpp</in>
+                  <in>ctextlabelcreator_test.cpp</in>
+                  <in>cverticalswitchcreator_test.cpp</in>
+                  <in>cviewcontainercreator_test.cpp</in>
+                  <in>cviewcreator_test.cpp</in>
+                  <in>cvumetercreator_test.cpp</in>
+                  <in>cxypadcreator_test.cpp</in>
+                  <in>helpers.h</in>
+                  <in>stringlistcreator_test.cpp</in>
+                  <in>uiviewcreator_test.cpp</in>
+                  <in>uiviewswitchcontainercreator_test.cpp</in>
+                </df>
+                <in>base64codec.cpp</in>
+                <in>cstream_test.cpp</in>
+                <in>delegationcontroller_test.cpp</in>
+                <in>uiattributes_test.cpp</in>
+                <in>uidescription_test.cpp</in>
+                <in>uidescriptionadapter.h</in>
+                <in>uiviewfactory_test.cpp</in>
+                <in>uiviewswitchcontainer_test.cpp</in>
+                <in>xmlparser_test.cpp</in>
+              </df>
+              <in>unittests.cpp</in>
+              <in>unittests.h</in>
+            </df>
+          </df>
+          <df name="tools">
+            <df name="imagestitcher">
+              <df name="resource">
+              </df>
+              <df name="source">
+                <in>app.cpp</in>
+                <in>document.cpp</in>
+                <in>document.h</in>
+                <in>documentcontroller.cpp</in>
+                <in>documentcontroller.h</in>
+                <in>imageframesview.cpp</in>
+                <in>imageframesview.h</in>
+                <in>startupcontroller.cpp</in>
+                <in>startupcontroller.h</in>
+              </df>
+            </df>
+            <df name="uidesccompressor">
+              <in>main.cpp</in>
+            </df>
+          </df>
+          <df name="uidescription">
+            <df name="detail">
+              <in>uiviewcreatorattributes.h</in>
+            </df>
+            <df name="editing">
+              <df name="resources">
+              </df>
+              <in>doc.h</in>
+              <in>iaction.h</in>
+              <in>igridprocessor.h</in>
+              <in>uiactions.cpp</in>
+              <in>uiactions.h</in>
+              <in>uiattributescontroller.cpp</in>
+              <in>uiattributescontroller.h</in>
+              <in>uibasedatasource.h</in>
+              <in>uibitmapscontroller.cpp</in>
+              <in>uibitmapscontroller.h</in>
+              <in>uicolor.cpp</in>
+              <in>uicolor.h</in>
+              <in>uicolorchoosercontroller.cpp</in>
+              <in>uicolorchoosercontroller.h</in>
+              <in>uicolorscontroller.cpp</in>
+              <in>uicolorscontroller.h</in>
+              <in>uicolorslider.cpp</in>
+              <in>uicolorslider.h</in>
+              <in>uicrosslines.cpp</in>
+              <in>uicrosslines.h</in>
+              <in>uidialogcontroller.cpp</in>
+              <in>uidialogcontroller.h</in>
+              <in>uieditcontroller.cpp</in>
+              <in>uieditcontroller.h</in>
+              <in>uieditmenucontroller.cpp</in>
+              <in>uieditmenucontroller.h</in>
+              <in>uieditview.cpp</in>
+              <in>uieditview.h</in>
+              <in>uifocussettingscontroller.cpp</in>
+              <in>uifocussettingscontroller.h</in>
+              <in>uifontscontroller.cpp</in>
+              <in>uifontscontroller.h</in>
+              <in>uigradientscontroller.cpp</in>
+              <in>uigradientscontroller.h</in>
+              <in>uigrid.h</in>
+              <in>uigridcontroller.cpp</in>
+              <in>uigridcontroller.h</in>
+              <in>uioverlayview.cpp</in>
+              <in>uioverlayview.h</in>
+              <in>uiselection.cpp</in>
+              <in>uiselection.h</in>
+              <in>uitagscontroller.cpp</in>
+              <in>uitagscontroller.h</in>
+              <in>uitemplatecontroller.cpp</in>
+              <in>uitemplatecontroller.h</in>
+              <in>uitemplatesettingscontroller.cpp</in>
+              <in>uitemplatesettingscontroller.h</in>
+              <in>uiundomanager.cpp</in>
+              <in>uiundomanager.h</in>
+              <in>uiviewcreatecontroller.cpp</in>
+              <in>uiviewcreatecontroller.h</in>
+            </df>
+            <df name="expat">
+              <in>ascii.h</in>
+              <in>asciitab.h</in>
+              <in>expat.h</in>
+              <in>expat_external.h</in>
+              <in>iasciitab.h</in>
+              <in>internal.h</in>
+              <in>latin1tab.h</in>
+              <in>macconfig.h</in>
+              <in>nametab.h</in>
+              <in>utf8tab.h</in>
+              <in>winconfig.h</in>
+              <in>xmlparse.c</in>
+              <in>xmlrole.c</in>
+              <in>xmlrole.h</in>
+              <in>xmltok.c</in>
+              <in>xmltok.h</in>
+              <in>xmltok_impl.c</in>
+              <in>xmltok_impl.h</in>
+              <in>xmltok_ns.c</in>
+            </df>
+            <df name="miniz">
+              <in>miniz.c</in>
+              <in>miniz.h</in>
+            </df>
+            <df name="viewcreator">
+              <in>animationsplashscreencreator.cpp</in>
+              <in>animationsplashscreencreator.h</in>
+              <in>animknobcreator.cpp</in>
+              <in>animknobcreator.h</in>
+              <in>checkboxcreator.cpp</in>
+              <in>checkboxcreator.h</in>
+              <in>controlcreator.cpp</in>
+              <in>controlcreator.h</in>
+              <in>gradientviewcreator.cpp</in>
+              <in>gradientviewcreator.h</in>
+              <in>kickbuttoncreator.cpp</in>
+              <in>kickbuttoncreator.h</in>
+              <in>knobcreator.cpp</in>
+              <in>knobcreator.h</in>
+              <in>layeredviewcontainercreator.cpp</in>
+              <in>layeredviewcontainercreator.h</in>
+              <in>moviebitmapcreator.cpp</in>
+              <in>moviebitmapcreator.h</in>
+              <in>moviebuttoncreator.cpp</in>
+              <in>moviebuttoncreator.h</in>
+              <in>multibitmapcontrolcreator.cpp</in>
+              <in>multibitmapcontrolcreator.h</in>
+              <in>multilinetextlabelcreator.cpp</in>
+              <in>multilinetextlabelcreator.h</in>
+              <in>onoffbuttoncreator.cpp</in>
+              <in>onoffbuttoncreator.h</in>
+              <in>optionmenucreator.cpp</in>
+              <in>optionmenucreator.h</in>
+              <in>paramdisplaycreator.cpp</in>
+              <in>paramdisplaycreator.h</in>
+              <in>rockerswitchcreator.cpp</in>
+              <in>rockerswitchcreator.h</in>
+              <in>rowcolumnviewcreator.cpp</in>
+              <in>rowcolumnviewcreator.h</in>
+              <in>scrollviewcreator.cpp</in>
+              <in>scrollviewcreator.h</in>
+              <in>searchtexteditcreator.cpp</in>
+              <in>searchtexteditcreator.h</in>
+              <in>segmentbuttoncreator.cpp</in>
+              <in>segmentbuttoncreator.h</in>
+              <in>shadowviewcontainercreator.cpp</in>
+              <in>shadowviewcontainercreator.h</in>
+              <in>sliderviewcreator.cpp</in>
+              <in>sliderviewcreator.h</in>
+              <in>splitviewcreator.cpp</in>
+              <in>splitviewcreator.h</in>
+              <in>stringlistcontrolcreator.cpp</in>
+              <in>stringlistcontrolcreator.h</in>
+              <in>switchcreators.cpp</in>
+              <in>switchcreators.h</in>
+              <in>textbuttoncreator.cpp</in>
+              <in>textbuttoncreator.h</in>
+              <in>texteditcreator.cpp</in>
+              <in>texteditcreator.h</in>
+              <in>textlabelcreator.cpp</in>
+              <in>textlabelcreator.h</in>
+              <in>uiviewswitchcontainercreator.cpp</in>
+              <in>uiviewswitchcontainercreator.h</in>
+              <in>viewcontainercreator.cpp</in>
+              <in>viewcontainercreator.h</in>
+              <in>viewcreator.cpp</in>
+              <in>viewcreator.h</in>
+              <in>vumetercreator.cpp</in>
+              <in>vumetercreator.h</in>
+              <in>xypadcreator.cpp</in>
+              <in>xypadcreator.h</in>
+            </df>
+            <in>base64codec.h</in>
+            <in>compresseduidescription.cpp</in>
+            <in>compresseduidescription.h</in>
+            <in>cstream.cpp</in>
+            <in>cstream.h</in>
+            <in>delegationcontroller.h</in>
+            <in>doc.h</in>
+            <in>icontroller.h</in>
+            <in>iuidescription.h</in>
+            <in>iviewcreator.h</in>
+            <in>iviewfactory.h</in>
+            <in>uiattributes.cpp</in>
+            <in>uiattributes.h</in>
+            <in>uidescription.cpp</in>
+            <in>uidescription.h</in>
+            <in>uidescriptionfwd.h</in>
+            <in>uidescriptionlistener.h</in>
+            <in>uiviewcreator.cpp</in>
+            <in>uiviewcreator.h</in>
+            <in>uiviewfactory.cpp</in>
+            <in>uiviewfactory.h</in>
+            <in>uiviewswitchcontainer.cpp</in>
+            <in>uiviewswitchcontainer.h</in>
+            <in>xmlparser.cpp</in>
+            <in>xmlparser.h</in>
+          </df>
+          <in>vstgui.cpp</in>
+          <in>vstgui.h</in>
+          <in>vstgui_ios.mm</in>
+          <in>vstgui_linux.cpp</in>
+          <in>vstgui_mac.mm</in>
+          <in>vstgui_standalone.cpp</in>
+          <in>vstgui_standalone_mac.mm</in>
+          <in>vstgui_standalone_win32.cpp</in>
+          <in>vstgui_uidescription.cpp</in>
+          <in>vstgui_uidescription.h</in>
+          <in>vstgui_uidescription_ios.mm</in>
+          <in>vstgui_uidescription_mac.mm</in>
+          <in>vstgui_uidescription_win32.cpp</in>
+          <in>vstgui_win32.cpp</in>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <dbxdebugger version="1">
+        <pathmaps>
+        </pathmaps>
+        <interceptlist>
+          <interceptoptions all="false" unhandled="true" unexpected="true"/>
+        </interceptlist>
+        <signals>
+        </signals>
+        <options>
+          <DebugOptions>
+          </DebugOptions>
+        </options>
+        <buildfirst buildfirst_overriden="false" buildfirst_old="false"/>
+      </dbxdebugger>
+      <dbxrtc version="1">
+        <options>
+          <RtcOptions>
+            <option name="rtc_error_log_file_name" value="/dev/null"/>
+          </RtcOptions>
+        </options>
+        <loadobjs>
+        </loadobjs>
+      </dbxrtc>
+      <nativedebugger version="1">
+        <engine>dbx</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

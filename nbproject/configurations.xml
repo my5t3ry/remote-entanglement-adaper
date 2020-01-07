@@ -1,0 +1,2319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="lib">
+        <df name="dpf">
+          <df name="dgl">
+            <df name="src">
+              <df name="nanovg">
+                <in>nanovg.c</in>
+              </df>
+              <df name="pugl">
+                <in>pugl_haiku.cpp</in>
+                <in>pugl_osx.m</in>
+                <in>pugl_win.cpp</in>
+                <in>pugl_x11.c</in>
+              </df>
+              <df name="sofd">
+                <in>libsofd.c</in>
+              </df>
+              <in>Application.cpp</in>
+              <in>Cairo.cpp</in>
+              <in>Color.cpp</in>
+              <in>Geometry.cpp</in>
+              <in>Image.cpp</in>
+              <in>ImageBase.cpp</in>
+              <in>ImageWidgets.cpp</in>
+              <in>NanoVG.cpp</in>
+              <in>OpenGL.cpp</in>
+              <in>Resources.cpp</in>
+              <in>Widget.cpp</in>
+              <in>WidgetPrivateData.cpp</in>
+              <in>Window.cpp</in>
+            </df>
+          </df>
+          <df name="distrho">
+            <df name="src">
+              <in>DistrhoPlugin.cpp</in>
+              <in>DistrhoPluginCarla.cpp</in>
+              <in>DistrhoPluginJack.cpp</in>
+              <in>DistrhoPluginLADSPA+DSSI.cpp</in>
+              <in>DistrhoPluginLV2.cpp</in>
+              <in>DistrhoPluginLV2export.cpp</in>
+              <in>DistrhoPluginVST.cpp</in>
+              <in>DistrhoUI.cpp</in>
+              <in>DistrhoUIDSSI.cpp</in>
+              <in>DistrhoUILV2.cpp</in>
+            </df>
+            <in>DistrhoPluginMain.cpp</in>
+            <in>DistrhoUIMain.cpp</in>
+          </df>
+          <df name="examples">
+            <df name="CairoUI">
+              <in>CairoExamplePlugin.cpp</in>
+              <in>CairoExampleUI.cpp</in>
+              <in>DemoWidgetBanner.cpp</in>
+              <in>DemoWidgetClickable.cpp</in>
+            </df>
+            <df name="ExternalUI">
+              <in>ExternalExamplePlugin.cpp</in>
+              <in>ExternalExampleUI.cpp</in>
+            </df>
+            <df name="Info">
+              <in>InfoExamplePlugin.cpp</in>
+              <in>InfoExampleUI.cpp</in>
+            </df>
+            <df name="Latency">
+              <in>LatencyExamplePlugin.cpp</in>
+            </df>
+            <df name="Meters">
+              <in>ExamplePluginMeters.cpp</in>
+              <in>ExampleUIMeters.cpp</in>
+            </df>
+            <df name="MidiThrough">
+              <in>MidiThroughExamplePlugin.cpp</in>
+            </df>
+            <df name="Parameters">
+              <in>ExamplePluginParameters.cpp</in>
+              <in>ExampleUIParameters.cpp</in>
+            </df>
+            <df name="States">
+              <in>ExamplePluginStates.cpp</in>
+              <in>ExampleUIStates.cpp</in>
+            </df>
+          </df>
+          <df name="utils">
+            <df name="lv2-ttl-generator">
+              <in>lv2_ttl_generator.c</in>
+            </df>
+          </df>
+        </df>
+        <df name="vstgui">
+          <df name="vstgui">
+            <df name="contrib">
+              <in>ciboxblurfilter.mm</in>
+              <in>keyboardview.cpp</in>
+            </df>
+            <df name="lib">
+              <df name="animation">
+                <in>animations.cpp</in>
+                <in>animator.cpp</in>
+                <in>timingfunctions.cpp</in>
+              </df>
+              <df name="controls">
+                <in>cautoanimation.cpp</in>
+                <in>cbuttons.cpp</in>
+                <in>ccolorchooser.cpp</in>
+                <in>ccontrol.cpp</in>
+                <in>cfontchooser.cpp</in>
+                <in>cknob.cpp</in>
+                <in>clistcontrol.cpp</in>
+                <in>cmoviebitmap.cpp</in>
+                <in>cmoviebutton.cpp</in>
+                <in>coptionmenu.cpp</in>
+                <in>cparamdisplay.cpp</in>
+                <in>cscrollbar.cpp</in>
+                <in>csearchtextedit.cpp</in>
+                <in>csegmentbutton.cpp</in>
+                <in>cslider.cpp</in>
+                <in>cspecialdigit.cpp</in>
+                <in>csplashscreen.cpp</in>
+                <in>cstringlist.cpp</in>
+                <in>cswitch.cpp</in>
+                <in>ctextedit.cpp</in>
+                <in>ctextlabel.cpp</in>
+                <in>cvumeter.cpp</in>
+                <in>cxypad.cpp</in>
+              </df>
+              <df name="platform">
+                <df name="common">
+                  <in>fileresourceinputstream.cpp</in>
+                  <in>genericoptionmenu.cpp</in>
+                  <in>generictextedit.cpp</in>
+                </df>
+                <df name="linux">
+                  <in>cairobitmap.cpp</in>
+                  <in>cairocontext.cpp</in>
+                  <in>cairofont.cpp</in>
+                  <in>cairogradient.cpp</in>
+                  <in>cairopath.cpp</in>
+                  <in>linuxstring.cpp</in>
+                  <in>x11fileselector.cpp</in>
+                  <in>x11frame.cpp</in>
+                  <in>x11platform.cpp</in>
+                  <in>x11timer.cpp</in>
+                  <in>x11utils.cpp</in>
+                </df>
+                <df name="mac">
+                  <df name="carbon">
+                    <in>hiviewframe.cpp</in>
+                    <in>hiviewoptionmenu.cpp</in>
+                    <in>hiviewtextedit.cpp</in>
+                  </df>
+                  <df name="cocoa">
+                    <in>autoreleasepool.mm</in>
+                    <in>cocoahelpers.mm</in>
+                    <in>cocoaopenglview.mm</in>
+                    <in>cocoatextedit.mm</in>
+                    <in>nsviewdraggingsession.mm</in>
+                    <in>nsviewframe.mm</in>
+                    <in>nsviewoptionmenu.mm</in>
+                  </df>
+                  <df name="ios">
+                    <in>uiopenglview.mm</in>
+                    <in>uitextedit.mm</in>
+                    <in>uiviewframe.mm</in>
+                  </df>
+                  <in>caviewlayer.mm</in>
+                  <in>cfontmac.mm</in>
+                  <in>cgbitmap.cpp</in>
+                  <in>cgdrawcontext.cpp</in>
+                  <in>macclipboard.mm</in>
+                  <in>macfileselector.mm</in>
+                  <in>macglobals.cpp</in>
+                  <in>macstring.mm</in>
+                  <in>mactimer.cpp</in>
+                  <in>quartzgraphicspath.cpp</in>
+                </df>
+                <df name="win32">
+                  <df name="direct2d">
+                    <in>d2dbitmap.cpp</in>
+                    <in>d2ddrawcontext.cpp</in>
+                    <in>d2dfont.cpp</in>
+                    <in>d2dgraphicspath.cpp</in>
+                  </df>
+                  <in>win32datapackage.cpp</in>
+                  <in>win32dragging.cpp</in>
+                  <in>win32frame.cpp</in>
+                  <in>win32openglview.cpp</in>
+                  <in>win32optionmenu.cpp</in>
+                  <in>win32support.cpp</in>
+                  <in>win32textedit.cpp</in>
+                  <in>winfileselector.cpp</in>
+                  <in>winstring.cpp</in>
+                  <in>wintimer.cpp</in>
+                </df>
+              </df>
+              <in>cbitmap.cpp</in>
+              <in>cbitmapfilter.cpp</in>
+              <in>ccolor.cpp</in>
+              <in>cdatabrowser.cpp</in>
+              <in>cdrawcontext.cpp</in>
+              <in>cdrawmethods.cpp</in>
+              <in>cdropsource.cpp</in>
+              <in>cfileselector.cpp</in>
+              <in>cfont.cpp</in>
+              <in>cframe.cpp</in>
+              <in>cgradientview.cpp</in>
+              <in>cgraphicspath.cpp</in>
+              <in>clayeredviewcontainer.cpp</in>
+              <in>clinestyle.cpp</in>
+              <in>coffscreencontext.cpp</in>
+              <in>copenglview.cpp</in>
+              <in>cpoint.cpp</in>
+              <in>crect.cpp</in>
+              <in>crowcolumnview.cpp</in>
+              <in>cscrollview.cpp</in>
+              <in>cshadowviewcontainer.cpp</in>
+              <in>csplitview.cpp</in>
+              <in>cstring.cpp</in>
+              <in>ctabview.cpp</in>
+              <in>ctooltipsupport.cpp</in>
+              <in>cview.cpp</in>
+              <in>cviewcontainer.cpp</in>
+              <in>cvstguitimer.cpp</in>
+              <in>genericstringlistdatabrowsersource.cpp</in>
+              <in>vstguidebug.cpp</in>
+            </df>
+            <df name="plugin-bindings">
+              <in>aeffguieditor.cpp</in>
+              <in>plugguieditor.cpp</in>
+              <in>vst3editor.cpp</in>
+              <in>vst3groupcontroller.cpp</in>
+              <in>vst3padcontroller.cpp</in>
+            </df>
+            <df name="standalone">
+              <df name="examples">
+                <df name="mandelbrot">
+                  <df name="source">
+                    <in>mandelbrotapp.cpp</in>
+                    <in>mandelbrotview.cpp</in>
+                    <in>mandelbrotwindow.cpp</in>
+                    <in>progressindicatorview.cpp</in>
+                    <in>touchbarsupport.mm</in>
+                  </df>
+                </df>
+                <df name="simple_standalone">
+                  <df name="source">
+                    <in>myapp.cpp</in>
+                  </df>
+                </df>
+                <df name="standalone">
+                  <df name="source">
+                    <in>AlertBoxDesign.cpp</in>
+                    <in>testabout.cpp</in>
+                    <in>testappdelegate.cpp</in>
+                    <in>testmodel.cpp</in>
+                  </df>
+                </df>
+              </df>
+              <df name="source">
+                <df name="helpers">
+                  <in>value.cpp</in>
+                </df>
+                <df name="platform">
+                  <df name="gdk">
+                    <in>gdkapplication.cpp</in>
+                    <in>gdkasync.cpp</in>
+                    <in>gdkcommondirectories.cpp</in>
+                    <in>gdkpreference.cpp</in>
+                    <in>gdkrunloop.cpp</in>
+                    <in>gdkwindow.cpp</in>
+                  </df>
+                  <df name="mac">
+                    <in>VSTGUICommand.mm</in>
+                    <in>macapplication.mm</in>
+                    <in>macasync.mm</in>
+                    <in>maccommondirectories.mm</in>
+                    <in>macpreference.mm</in>
+                    <in>macwindow.mm</in>
+                  </df>
+                  <df name="win32">
+                    <in>win32application.cpp</in>
+                    <in>win32async.cpp</in>
+                    <in>win32commondirectories.cpp</in>
+                    <in>win32menu.cpp</in>
+                    <in>win32preference.cpp</in>
+                    <in>win32window.cpp</in>
+                  </df>
+                </df>
+                <in>application.cpp</in>
+                <in>genericalertbox.cpp</in>
+                <in>shareduiresources.cpp</in>
+                <in>uidescriptionwindowcontroller.cpp</in>
+                <in>window.cpp</in>
+              </df>
+            </df>
+            <df name="tests">
+              <df name="base64codecspeed">
+                <in>main.cpp</in>
+              </df>
+              <df name="gfxtest">
+                <df name="source">
+                  <in>app.cpp</in>
+                  <in>drawdevicetests.cpp</in>
+                </df>
+              </df>
+              <df name="ios standalone">
+                <df name="iOS Standalone">
+                  <in>AppDelegate.mm</in>
+                  <in>ViewController.mm</in>
+                  <in>main.m</in>
+                </df>
+              </df>
+              <df name="uidescription vst3">
+                <df name="source">
+                  <in>animationtest.cpp</in>
+                  <in>edituidescriptioneditor.cpp</in>
+                  <in>factory.cpp</in>
+                  <in>graphicstest.cpp</in>
+                  <in>openglviewtest.cpp</in>
+                  <in>subcontrollertest.cpp</in>
+                  <in>uidescription test.cpp</in>
+                  <in>vst3sdksources.cpp</in>
+                  <in>zoomtest.cpp</in>
+                </df>
+              </df>
+              <df name="uidescriptioneditorapp">
+                <df name="source">
+                  <in>app.cpp</in>
+                </df>
+              </df>
+              <df name="unittest">
+                <df name="lib">
+                  <df name="animation">
+                    <in>animations_test.cpp</in>
+                    <in>animator_test.cpp</in>
+                    <in>timingfunction_tests.cpp</in>
+                  </df>
+                  <df name="controls">
+                    <in>ccheckbox_test.cpp</in>
+                    <in>ccontrol_test.cpp</in>
+                    <in>ckickbutton_test.cpp</in>
+                    <in>clistcontrol_test.cpp</in>
+                    <in>conoffbutton_test.cpp</in>
+                    <in>csegmentbutton_test.cpp</in>
+                    <in>ctextbutton_test.cpp</in>
+                    <in>cxypad_test.cpp</in>
+                  </df>
+                  <in>cbitmap_test.cpp</in>
+                  <in>cbuttonstate_test.cpp</in>
+                  <in>ccolor_test.cpp</in>
+                  <in>cfont_test.cpp</in>
+                  <in>cframe_test.cpp</in>
+                  <in>clinestyle_test.cpp</in>
+                  <in>cpoint_test.cpp</in>
+                  <in>crect_test.cpp</in>
+                  <in>csplitview_test.cpp</in>
+                  <in>cview_test.cpp</in>
+                  <in>cviewcontainer_test.cpp</in>
+                  <in>idependency_test.cpp</in>
+                  <in>platform_helper_linux.cpp</in>
+                  <in>platform_helper_mac.mm</in>
+                  <in>platform_helper_win32.cpp</in>
+                  <in>utf8string_test.cpp</in>
+                  <in>utf8stringview_test.cpp</in>
+                </df>
+                <df name="uidescription">
+                  <df name="uiviewcreator">
+                    <in>canimationsplashscreencreator_test.cpp</in>
+                    <in>canimknobcreator_test.cpp</in>
+                    <in>ccheckboxcreator_test.cpp</in>
+                    <in>ccontrolcreator_test.cpp</in>
+                    <in>cgradientviewcreator_test.cpp</in>
+                    <in>chorizontalswitchcreator_test.cpp</in>
+                    <in>ckickbuttoncreator_test.cpp</in>
+                    <in>cknobcreator_test.cpp</in>
+                    <in>clayeredviewcontainercreator_test.cpp</in>
+                    <in>cmoviebitmapcreator_test.cpp</in>
+                    <in>cmoviebuttoncreator_test.cpp</in>
+                    <in>cmultilinetextlabelcreator_test.cpp</in>
+                    <in>conoffbuttoncreator_test.cpp</in>
+                    <in>coptionmenucreator_test.cpp</in>
+                    <in>cparamdisplaycreator_test.cpp</in>
+                    <in>crockerswitchcreator_test.cpp</in>
+                    <in>crowcolumnviewcreator_test.cpp</in>
+                    <in>cscrollviewcreator_test.cpp</in>
+                    <in>csearchtexteditcreator_test.cpp</in>
+                    <in>csegmentbuttoncreator_test.cpp</in>
+                    <in>cshadowviewcontainercreator_test.cpp</in>
+                    <in>cslidercreator_test.cpp</in>
+                    <in>csplitviewcreator_test.cpp</in>
+                    <in>ctextbuttoncreator_test.cpp</in>
+                    <in>ctexteditcreator_test.cpp</in>
+                    <in>ctextlabelcreator_test.cpp</in>
+                    <in>cverticalswitchcreator_test.cpp</in>
+                    <in>cviewcontainercreator_test.cpp</in>
+                    <in>cviewcreator_test.cpp</in>
+                    <in>cvumetercreator_test.cpp</in>
+                    <in>cxypadcreator_test.cpp</in>
+                    <in>stringlistcreator_test.cpp</in>
+                    <in>uiviewcreator_test.cpp</in>
+                    <in>uiviewswitchcontainercreator_test.cpp</in>
+                  </df>
+                  <in>base64codec.cpp</in>
+                  <in>cstream_test.cpp</in>
+                  <in>delegationcontroller_test.cpp</in>
+                  <in>uiattributes_test.cpp</in>
+                  <in>uidescription_test.cpp</in>
+                  <in>uiviewfactory_test.cpp</in>
+                  <in>uiviewswitchcontainer_test.cpp</in>
+                  <in>xmlparser_test.cpp</in>
+                </df>
+                <in>unittests.cpp</in>
+              </df>
+            </df>
+            <df name="tools">
+              <df name="imagestitcher">
+                <df name="source">
+                  <in>app.cpp</in>
+                  <in>document.cpp</in>
+                  <in>documentcontroller.cpp</in>
+                  <in>imageframesview.cpp</in>
+                  <in>startupcontroller.cpp</in>
+                </df>
+              </df>
+              <df name="uidesccompressor">
+                <in>main.cpp</in>
+              </df>
+            </df>
+            <df name="uidescription">
+              <df name="editing">
+                <in>uiactions.cpp</in>
+                <in>uiattributescontroller.cpp</in>
+                <in>uibitmapscontroller.cpp</in>
+                <in>uicolor.cpp</in>
+                <in>uicolorchoosercontroller.cpp</in>
+                <in>uicolorscontroller.cpp</in>
+                <in>uicolorslider.cpp</in>
+                <in>uicrosslines.cpp</in>
+                <in>uidialogcontroller.cpp</in>
+                <in>uieditcontroller.cpp</in>
+                <in>uieditmenucontroller.cpp</in>
+                <in>uieditview.cpp</in>
+                <in>uifocussettingscontroller.cpp</in>
+                <in>uifontscontroller.cpp</in>
+                <in>uigradientscontroller.cpp</in>
+                <in>uigridcontroller.cpp</in>
+                <in>uioverlayview.cpp</in>
+                <in>uiselection.cpp</in>
+                <in>uitagscontroller.cpp</in>
+                <in>uitemplatecontroller.cpp</in>
+                <in>uitemplatesettingscontroller.cpp</in>
+                <in>uiundomanager.cpp</in>
+                <in>uiviewcreatecontroller.cpp</in>
+              </df>
+              <df name="expat">
+                <in>xmlparse.c</in>
+                <in>xmlrole.c</in>
+                <in>xmltok.c</in>
+                <in>xmltok_impl.c</in>
+                <in>xmltok_ns.c</in>
+              </df>
+              <df name="miniz">
+                <in>miniz.c</in>
+              </df>
+              <df name="viewcreator">
+                <in>animationsplashscreencreator.cpp</in>
+                <in>animknobcreator.cpp</in>
+                <in>checkboxcreator.cpp</in>
+                <in>controlcreator.cpp</in>
+                <in>gradientviewcreator.cpp</in>
+                <in>kickbuttoncreator.cpp</in>
+                <in>knobcreator.cpp</in>
+                <in>layeredviewcontainercreator.cpp</in>
+                <in>moviebitmapcreator.cpp</in>
+                <in>moviebuttoncreator.cpp</in>
+                <in>multibitmapcontrolcreator.cpp</in>
+                <in>multilinetextlabelcreator.cpp</in>
+                <in>onoffbuttoncreator.cpp</in>
+                <in>optionmenucreator.cpp</in>
+                <in>paramdisplaycreator.cpp</in>
+                <in>rockerswitchcreator.cpp</in>
+                <in>rowcolumnviewcreator.cpp</in>
+                <in>scrollviewcreator.cpp</in>
+                <in>searchtexteditcreator.cpp</in>
+                <in>segmentbuttoncreator.cpp</in>
+                <in>shadowviewcontainercreator.cpp</in>
+                <in>sliderviewcreator.cpp</in>
+                <in>splitviewcreator.cpp</in>
+                <in>stringlistcontrolcreator.cpp</in>
+                <in>switchcreators.cpp</in>
+                <in>textbuttoncreator.cpp</in>
+                <in>texteditcreator.cpp</in>
+                <in>textlabelcreator.cpp</in>
+                <in>uiviewswitchcontainercreator.cpp</in>
+                <in>viewcontainercreator.cpp</in>
+                <in>viewcreator.cpp</in>
+                <in>vumetercreator.cpp</in>
+                <in>xypadcreator.cpp</in>
+              </df>
+              <in>compresseduidescription.cpp</in>
+              <in>cstream.cpp</in>
+              <in>uiattributes.cpp</in>
+              <in>uidescription.cpp</in>
+              <in>uiviewcreator.cpp</in>
+              <in>uiviewfactory.cpp</in>
+              <in>uiviewswitchcontainer.cpp</in>
+              <in>xmlparser.cpp</in>
+            </df>
+            <in>vstgui.cpp</in>
+            <in>vstgui_ios.mm</in>
+            <in>vstgui_linux.cpp</in>
+            <in>vstgui_mac.mm</in>
+            <in>vstgui_standalone.cpp</in>
+            <in>vstgui_standalone_mac.mm</in>
+            <in>vstgui_standalone_win32.cpp</in>
+            <in>vstgui_uidescription.cpp</in>
+            <in>vstgui_uidescription_ios.mm</in>
+            <in>vstgui_uidescription_mac.mm</in>
+            <in>vstgui_uidescription_win32.cpp</in>
+            <in>vstgui_win32.cpp</in>
+          </df>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="lib/dpf/dgl/src/Application.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/Cairo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/Color.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/Geometry.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/Image.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/ImageBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/ImageWidgets.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/NanoVG.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/OpenGL.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/Resources.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/Widget.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/WidgetPrivateData.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/Window.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/nanovg/nanovg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/pugl/pugl_haiku.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/pugl/pugl_osx.m" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/pugl/pugl_win.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/pugl/pugl_x11.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/dpf/dgl/src/sofd/libsofd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/DistrhoPluginMain.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/DistrhoUIMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoPlugin.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoPluginCarla.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoPluginJack.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoPluginLADSPA+DSSI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoPluginLV2.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoPluginLV2export.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoPluginVST.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoUI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoUIDSSI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/distrho/src/DistrhoUILV2.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/CairoUI/CairoExamplePlugin.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/CairoUI/CairoExampleUI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/CairoUI/DemoWidgetBanner.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/CairoUI/DemoWidgetClickable.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/ExternalUI/ExternalExamplePlugin.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/ExternalUI/ExternalExampleUI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/Info/InfoExamplePlugin.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/Info/InfoExampleUI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/Latency/LatencyExamplePlugin.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/Meters/ExamplePluginMeters.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/Meters/ExampleUIMeters.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/MidiThrough/MidiThroughExamplePlugin.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/Parameters/ExamplePluginParameters.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/Parameters/ExampleUIParameters.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/States/ExamplePluginStates.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/examples/States/ExampleUIStates.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/dpf/utils/lv2-ttl-generator/lv2_ttl_generator.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/contrib/ciboxblurfilter.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/contrib/keyboardview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/animation/animations.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/animation/animator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/animation/timingfunctions.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cbitmap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cbitmapfilter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/ccolor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cdatabrowser.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cdrawcontext.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cdrawmethods.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cdropsource.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cfileselector.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cfont.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cframe.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cgradientview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cgraphicspath.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/clayeredviewcontainer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/clinestyle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/coffscreencontext.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cautoanimation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cbuttons.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/ccolorchooser.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/ccontrol.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cfontchooser.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cknob.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/clistcontrol.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cmoviebitmap.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cmoviebutton.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/coptionmenu.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cparamdisplay.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cscrollbar.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/csearchtextedit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/csegmentbutton.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cslider.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cspecialdigit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/csplashscreen.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cstringlist.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cswitch.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/ctextedit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/ctextlabel.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cvumeter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/controls/cxypad.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/copenglview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cpoint.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/crect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/crowcolumnview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cscrollview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cshadowviewcontainer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/csplitview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cstring.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/ctabview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/ctooltipsupport.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cview.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cviewcontainer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/cvstguitimer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/genericstringlistdatabrowsersource.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/common/fileresourceinputstream.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/common/genericoptionmenu.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/common/generictextedit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/cairobitmap.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/cairocontext.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/cairofont.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/cairogradient.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/cairopath.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/linuxstring.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/x11fileselector.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/x11frame.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/x11platform.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/x11timer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/linux/x11utils.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/carbon/hiviewframe.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/carbon/hiviewoptionmenu.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/carbon/hiviewtextedit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/caviewlayer.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cfontmac.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cgbitmap.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cgdrawcontext.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cocoa/autoreleasepool.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cocoa/cocoahelpers.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cocoa/cocoaopenglview.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cocoa/cocoatextedit.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cocoa/nsviewdraggingsession.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cocoa/nsviewframe.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/cocoa/nsviewoptionmenu.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/ios/uiopenglview.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/ios/uitextedit.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/ios/uiviewframe.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/macclipboard.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/macfileselector.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/macglobals.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/macstring.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/mactimer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/mac/quartzgraphicspath.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/direct2d/d2dbitmap.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/direct2d/d2ddrawcontext.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/direct2d/d2dfont.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/direct2d/d2dgraphicspath.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/win32datapackage.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/win32dragging.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/win32frame.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/win32openglview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/win32optionmenu.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/win32support.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/win32textedit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/winfileselector.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/winstring.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/platform/win32/wintimer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/lib/vstguidebug.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/plugin-bindings/aeffguieditor.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/plugin-bindings/plugguieditor.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/plugin-bindings/vst3editor.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/plugin-bindings/vst3groupcontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/plugin-bindings/vst3padcontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/mandelbrot/source/mandelbrotapp.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/mandelbrot/source/mandelbrotview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/mandelbrot/source/mandelbrotwindow.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/mandelbrot/source/progressindicatorview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/mandelbrot/source/touchbarsupport.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/simple_standalone/source/myapp.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/standalone/source/AlertBoxDesign.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/standalone/source/testabout.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/standalone/source/testappdelegate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/examples/standalone/source/testmodel.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/application.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/genericalertbox.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/helpers/value.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/gdk/gdkapplication.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/gdk/gdkasync.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/gdk/gdkcommondirectories.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/gdk/gdkpreference.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/gdk/gdkrunloop.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/gdk/gdkwindow.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/mac/VSTGUICommand.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/mac/macapplication.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/mac/macasync.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/mac/maccommondirectories.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/mac/macpreference.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/mac/macwindow.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/win32/win32application.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/win32/win32async.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/win32/win32commondirectories.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/win32/win32menu.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/win32/win32preference.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/platform/win32/win32window.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/shareduiresources.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/uidescriptionwindowcontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/standalone/source/window.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/base64codecspeed/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/gfxtest/source/app.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/gfxtest/source/drawdevicetests.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/ios standalone/iOS Standalone/AppDelegate.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/ios standalone/iOS Standalone/ViewController.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/ios standalone/iOS Standalone/main.m"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/animationtest.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/edituidescriptioneditor.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/factory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/graphicstest.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/openglviewtest.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/subcontrollertest.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/uidescription test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/vst3sdksources.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescription vst3/source/zoomtest.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/uidescriptioneditorapp/source/app.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/animation/animations_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/animation/animator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/animation/timingfunction_tests.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/cbitmap_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/cbuttonstate_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/ccolor_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/cfont_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/cframe_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/clinestyle_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/controls/ccheckbox_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/controls/ccontrol_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/controls/ckickbutton_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/controls/clistcontrol_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/controls/conoffbutton_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/controls/csegmentbutton_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/controls/ctextbutton_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/controls/cxypad_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/cpoint_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/crect_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/csplitview_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/cview_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/cviewcontainer_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/idependency_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/platform_helper_linux.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/platform_helper_mac.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/platform_helper_win32.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/utf8string_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/lib/utf8stringview_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/base64codec.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/cstream_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/delegationcontroller_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiattributes_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uidescription_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/canimationsplashscreencreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/canimknobcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/ccheckboxcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/ccontrolcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cgradientviewcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/chorizontalswitchcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/ckickbuttoncreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cknobcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/clayeredviewcontainercreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cmoviebitmapcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cmoviebuttoncreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cmultilinetextlabelcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/conoffbuttoncreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/coptionmenucreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cparamdisplaycreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/crockerswitchcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/crowcolumnviewcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cscrollviewcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/csearchtexteditcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/csegmentbuttoncreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cshadowviewcontainercreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cslidercreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/csplitviewcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/ctextbuttoncreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/ctexteditcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/ctextlabelcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cverticalswitchcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cviewcontainercreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cviewcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cvumetercreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/cxypadcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/stringlistcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/uiviewcreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewcreator/uiviewswitchcontainercreator_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewfactory_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/uiviewswitchcontainer_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/uidescription/xmlparser_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tests/unittest/unittests.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tools/imagestitcher/source/app.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tools/imagestitcher/source/document.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tools/imagestitcher/source/documentcontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tools/imagestitcher/source/imageframesview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tools/imagestitcher/source/startupcontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/tools/uidesccompressor/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/compresseduidescription.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/cstream.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uiactions.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uiattributescontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uibitmapscontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uicolor.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uicolorchoosercontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uicolorscontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uicolorslider.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uicrosslines.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uidialogcontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uieditcontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uieditmenucontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uieditview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uifocussettingscontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uifontscontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uigradientscontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uigridcontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uioverlayview.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uiselection.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uitagscontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uitemplatecontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uitemplatesettingscontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uiundomanager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/editing/uiviewcreatecontroller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/expat/xmlparse.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/expat/xmlrole.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/expat/xmltok.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/expat/xmltok_impl.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/expat/xmltok_ns.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/miniz/miniz.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/uiattributes.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/uidescription.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/uiviewcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/uiviewfactory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/uiviewswitchcontainer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/animationsplashscreencreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/animknobcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/checkboxcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/controlcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/gradientviewcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/kickbuttoncreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/knobcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/layeredviewcontainercreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/moviebitmapcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/moviebuttoncreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/multibitmapcontrolcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/multilinetextlabelcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/onoffbuttoncreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/optionmenucreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/paramdisplaycreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/rockerswitchcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/rowcolumnviewcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/scrollviewcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/searchtexteditcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/segmentbuttoncreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/shadowviewcontainercreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/sliderviewcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/splitviewcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/stringlistcontrolcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/switchcreators.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/textbuttoncreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/texteditcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/textlabelcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/uiviewswitchcontainercreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/viewcontainercreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/viewcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/vumetercreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/viewcreator/xypadcreator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/uidescription/xmlparser.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_ios.mm" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_linux.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_mac.mm" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_standalone.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_standalone_mac.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_standalone_win32.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_uidescription.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_uidescription_ios.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_uidescription_mac.mm"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_uidescription_win32.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vstgui/vstgui/vstgui_win32.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
