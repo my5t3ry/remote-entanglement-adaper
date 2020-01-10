@@ -16,7 +16,8 @@ ifeq ($(HAVE_DGL),true)
 endif
 
 plugins: dgl
-	$(MAKE) all -C plugins/MVerb
+#	$(MAKE) all -C plugins/MVerb
+	$(MAKE) all -C plugins/RemoteEntanglement
 
 ifneq ($(CROSS_COMPILING),true)
 gen: plugins dpf/utils/lv2_ttl_generator

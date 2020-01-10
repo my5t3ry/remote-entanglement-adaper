@@ -523,6 +523,12 @@
           </df>
         </df>
       </df>
+      <df name="plugins">
+        <df name="remoteEntanglement">
+          <in>RemoteEntanglement.cpp</in>
+          <in>RemoteEntanglement.h</in>
+        </df>
+      </df>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -2313,6 +2319,16 @@
             flavor2="0">
       </item>
       <item path="lib/vstgui/vstgui/vstgui_win32.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="plugins/remoteEntanglement/RemoteEntanglement.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="plugins/remoteEntanglement/RemoteEntanglement.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
     </conf>
   </confs>

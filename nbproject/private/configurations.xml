@@ -2,12 +2,68 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="bin">
+        <df name="MVerb-dssi">
+        </df>
+        <df name="MVerb.lv2">
+        </df>
+      </df>
       <df name="build">
+        <df name="MVerb">
+        </df>
         <df name="remoteEntanglement">
         </df>
       </df>
       <df name="dpf">
         <df name=".travis">
+        </df>
+        <df name="bin">
+          <df name="d_cairoui-dssi">
+          </df>
+          <df name="d_cairoui.lv2">
+          </df>
+          <df name="d_extui-dssi">
+          </df>
+          <df name="d_extui.lv2">
+          </df>
+          <df name="d_info.lv2">
+          </df>
+          <df name="d_latency.lv2">
+          </df>
+          <df name="d_meters-dssi">
+          </df>
+          <df name="d_meters.lv2">
+          </df>
+          <df name="d_midiThrough.lv2">
+          </df>
+          <df name="d_parameters-dssi">
+          </df>
+          <df name="d_parameters.lv2">
+          </df>
+          <df name="d_states-dssi">
+          </df>
+          <df name="d_states.lv2">
+          </df>
+        </df>
+        <df name="build">
+          <df name="d_cairoui">
+          </df>
+          <df name="d_extui">
+          </df>
+          <df name="d_info">
+          </df>
+          <df name="d_latency">
+          </df>
+          <df name="d_meters">
+          </df>
+          <df name="d_midiThrough">
+          </df>
+          <df name="d_parameters">
+          </df>
+          <df name="d_states">
+          </df>
+          <df name="dgl">
+          </df>
         </df>
         <df name="dgl">
           <df name="src">
@@ -744,13 +800,9 @@
           <in>DistrhoUIMVerb.hpp</in>
           <in>MVerb.h</in>
         </df>
-      </df>
-      <df name="tmp">
-        <df name="MVerb">
-          <df name="dpf">
-          </df>
-          <df name="plugins">
-          </df>
+        <df name="remoteEntanglement">
+          <in>RemoteEntanglement.cpp</in>
+          <in>RemoteEntanglement.h</in>
         </df>
       </df>
       <df name="vstgui">
