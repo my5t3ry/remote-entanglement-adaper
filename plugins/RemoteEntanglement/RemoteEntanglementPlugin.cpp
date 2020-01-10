@@ -18,8 +18,4 @@ START_NAMESPACE_DISTRHO
 // -----------------------------------------------------------------------
 
 
-Plugin* createPlugin() {
-    return new RemoteEntanglementPlugin();
-}
-
 END_NAMESPACE_DISTRHO

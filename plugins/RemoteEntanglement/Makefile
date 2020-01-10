@@ -17,6 +17,9 @@ FILES_DSP = \
 
 # --------------------------------------------------------------
 # Do some magic
+ROC_PATH=../../roc/build/x86_64-pc-linux-gnu/gcc-7.4.0-release/libroc_unstripped.so.0.1
+LDFLAGS = $(ROC_PATH)
+CXXFLAGS = -I../../roc/src/modules/ 
 
 include ../../dpf/Makefile.plugins.mk
 

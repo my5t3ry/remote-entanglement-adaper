@@ -3,15 +3,11 @@
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
       <df name="bin">
-        <df name="MVerb-dssi">
-        </df>
-        <df name="MVerb.lv2">
+        <df name="RemoteEntanglementPlugin.lv2">
         </df>
       </df>
       <df name="build">
-        <df name="MVerb">
-        </df>
-        <df name="remoteEntanglement">
+        <df name="RemoteEntanglementPlugin">
         </df>
       </df>
       <df name="dpf">
@@ -61,8 +57,6 @@
           <df name="d_parameters">
           </df>
           <df name="d_states">
-          </df>
-          <df name="dgl">
           </df>
         </df>
         <df name="dgl">
@@ -800,9 +794,1033 @@
           <in>DistrhoUIMVerb.hpp</in>
           <in>MVerb.h</in>
         </df>
-        <df name="remoteEntanglement">
-          <in>RemoteEntanglement.cpp</in>
-          <in>RemoteEntanglement.h</in>
+        <df name="RemoteEntanglement">
+          <in>DistrhoPluginInfo.h</in>
+          <in>RemoteEntanglementPlugin.cpp</in>
+          <in>RemoteEntanglementPlugin.h</in>
+          <in>RemoteEntanglementPlugin.hpp</in>
+        </df>
+      </df>
+      <df name="roc">
+        <df name=".sconf_temp">
+          <in>conftest_112429635497449185504832831572456432920.c</in>
+          <in>conftest_222274963946932121880123628753512327049.cxx</in>
+          <in>conftest_233578142180231945973349103002380852469.c</in>
+          <in>conftest_26926381118101491077330819189099414691.c</in>
+          <in>conftest_32031969779907350871533465917158212269.c</in>
+        </df>
+        <df name="3rdparty">
+          <df name="x86_64-pc-linux-gnu">
+            <df name="gcc-7.4.0-release">
+              <df name="build">
+                <df name="openfec-1.4.2.4">
+                  <df name="include">
+                    <df name="lib_advanced">
+                      <df name="ldpc_from_file">
+                        <in>of_codec_profile.h</in>
+                        <in>of_ldpc_ff.h</in>
+                        <in>of_ldpc_ff_api.h</in>
+                        <in>of_ldpc_ff_includes.h</in>
+                        <in>of_ldpc_includes.h</in>
+                      </df>
+                    </df>
+                    <df name="lib_common">
+                      <df name="linear_binary_codes_utils">
+                        <df name="binary_matrix">
+                          <in>of_hamming_weight.h</in>
+                          <in>of_matrix_convert.h</in>
+                          <in>of_matrix_dense.h</in>
+                          <in>of_matrix_sparse.h</in>
+                          <in>of_tools.h</in>
+                        </df>
+                        <df name="it_decoding">
+                          <in>of_it_decoding.h</in>
+                        </df>
+                        <df name="ml_decoding">
+                          <in>of_ml_decoding.h</in>
+                          <in>of_ml_tool.h</in>
+                        </df>
+                        <in>of_create_pchk.h</in>
+                        <in>of_linear_binary_code.h</in>
+                        <in>of_symbol.h</in>
+                      </df>
+                      <df name="statistics">
+                        <in>of_statistics.h</in>
+                      </df>
+                      <in>of_cb.h</in>
+                      <in>of_debug.h</in>
+                      <in>of_mem.h</in>
+                      <in>of_openfec_api.h</in>
+                      <in>of_openfec_profile.h</in>
+                      <in>of_rand.h</in>
+                      <in>of_types.h</in>
+                    </df>
+                    <df name="lib_stable">
+                      <df name="2d_parity_matrix">
+                        <in>of_2d_parity.h</in>
+                        <in>of_2d_parity_api.h</in>
+                        <in>of_2d_parity_includes.h</in>
+                        <in>of_codec_profile.h</in>
+                      </df>
+                      <df name="ldpc_staircase">
+                        <in>of_codec_profile.h</in>
+                        <in>of_ldpc_includes.h</in>
+                        <in>of_ldpc_staircase.h</in>
+                        <in>of_ldpc_staircase_api.h</in>
+                      </df>
+                      <df name="reed-solomon_gf_2_8">
+                        <in>of_codec_profile.h</in>
+                        <in>of_reed-solomon_gf_2_8.h</in>
+                        <in>of_reed-solomon_gf_2_8_api.h</in>
+                        <in>of_reed-solomon_gf_2_8_includes.h</in>
+                      </df>
+                      <df name="reed-solomon_gf_2_m">
+                        <df name="galois_field_codes_utils">
+                          <in>algebra_2_4.h</in>
+                          <in>algebra_2_8.h</in>
+                          <in>of_galois_field_code.h</in>
+                        </df>
+                        <in>of_codec_profile.h</in>
+                        <in>of_reed-solomon_gf_2_m.h</in>
+                        <in>of_reed-solomon_gf_2_m_api.h</in>
+                        <in>of_reed-solomon_gf_2_m_includes.h</in>
+                      </df>
+                    </df>
+                  </df>
+                  <df name="lib">
+                  </df>
+                  <df name="src">
+                    <df name="openfec-1.4.2.4">
+                      <df name="applis">
+                        <df name="eperftool">
+                          <in>blocking_struct.c</in>
+                          <in>blocking_struct.h</in>
+                          <in>callbacks.c</in>
+                          <in>callbacks.h</in>
+                          <in>codec_instance_mgmt.c</in>
+                          <in>codec_instance_mgmt.h</in>
+                          <in>command_line.c</in>
+                          <in>defaults.h</in>
+                          <in>eperftool.c</in>
+                          <in>eperftool.h</in>
+                          <in>globals.c</in>
+                          <in>globals.h</in>
+                          <in>receiver.c</in>
+                          <in>sender.c</in>
+                          <in>tx_simulator.c</in>
+                        </df>
+                        <df name="howto_examples">
+                          <df name="simple_client_server">
+                            <in>simple_client.c</in>
+                            <in>simple_client_server.h</in>
+                            <in>simple_server.c</in>
+                          </df>
+                        </df>
+                      </df>
+                      <df name="bin">
+                        <df name="Release">
+                        </df>
+                      </df>
+                      <df name="build">
+                        <df name="applis">
+                          <df name="eperftool">
+                            <df name="CMakeFiles">
+                              <df name="eperftool.dir">
+                              </df>
+                            </df>
+                          </df>
+                          <df name="howto_examples">
+                            <df name="simple_client_server">
+                              <df name="CMakeFiles">
+                                <df name="simple_client.dir">
+                                </df>
+                                <df name="simple_server.dir">
+                                </df>
+                              </df>
+                            </df>
+                          </df>
+                        </df>
+                        <df name="CMakeFiles">
+                          <df name="3.16.2">
+                            <df name="CompilerIdC">
+                              <df name="tmp">
+                              </df>
+                              <in>CMakeCCompilerId.c</in>
+                            </df>
+                          </df>
+                          <df name="CMakeTmp">
+                          </df>
+                        </df>
+                        <df name="src">
+                          <df name="CMakeFiles">
+                            <df name="openfec.dir">
+                              <df name="lib_advanced">
+                                <df name="ldpc_from_file">
+                                </df>
+                              </df>
+                              <df name="lib_common">
+                                <df name="linear_binary_codes_utils">
+                                  <df name="binary_matrix">
+                                  </df>
+                                  <df name="it_decoding">
+                                  </df>
+                                  <df name="ml_decoding">
+                                  </df>
+                                </df>
+                                <df name="statistics">
+                                </df>
+                              </df>
+                              <df name="lib_stable">
+                                <df name="2d_parity_matrix">
+                                </df>
+                                <df name="ldpc_staircase">
+                                </df>
+                                <df name="reed-solomon_gf_2_8">
+                                </df>
+                                <df name="reed-solomon_gf_2_m">
+                                  <df name="galois_field_codes_utils">
+                                  </df>
+                                </df>
+                              </df>
+                            </df>
+                          </df>
+                        </df>
+                        <df name="tests">
+                          <df name="CMakeFiles">
+                            <df name="test_code_params.dir">
+                            </df>
+                            <df name="test_create_instance.dir">
+                            </df>
+                            <df name="test_encoder_instance.dir">
+                            </df>
+                          </df>
+                        </df>
+                        <df name="tools">
+                          <df name="descr_stats_v1.2">
+                            <df name="CMakeFiles">
+                              <df name="descr_stats.dir">
+                              </df>
+                            </df>
+                          </df>
+                        </df>
+                      </df>
+                      <df name="doc">
+                        <df name="doxygen">
+                        </df>
+                        <df name="howto_performance_evaluation">
+                        </df>
+                        <df name="howto_use_openfec_lib">
+                        </df>
+                      </df>
+                      <df name="perf_eval">
+                      </df>
+                      <df name="src">
+                        <df name="lib_advanced">
+                          <df name="ldpc_from_file">
+                            <in>of_codec_profile.h</in>
+                            <in>of_ldpc_ff.h</in>
+                            <in>of_ldpc_ff_api.c</in>
+                            <in>of_ldpc_ff_api.h</in>
+                            <in>of_ldpc_ff_includes.h</in>
+                            <in>of_ldpc_includes.h</in>
+                          </df>
+                        </df>
+                        <df name="lib_common">
+                          <df name="linear_binary_codes_utils">
+                            <df name="binary_matrix">
+                              <in>of_hamming_weight.c</in>
+                              <in>of_hamming_weight.h</in>
+                              <in>of_matrix_convert.c</in>
+                              <in>of_matrix_convert.h</in>
+                              <in>of_matrix_dense.c</in>
+                              <in>of_matrix_dense.h</in>
+                              <in>of_matrix_sparse.c</in>
+                              <in>of_matrix_sparse.h</in>
+                              <in>of_tools.c</in>
+                              <in>of_tools.h</in>
+                            </df>
+                            <df name="it_decoding">
+                              <in>of_it_decoding.c</in>
+                              <in>of_it_decoding.h</in>
+                            </df>
+                            <df name="ml_decoding">
+                              <in>of_ml_decoding.c</in>
+                              <in>of_ml_decoding.h</in>
+                              <in>of_ml_tool.c</in>
+                              <in>of_ml_tool.h</in>
+                            </df>
+                            <in>of_create_pchk.c</in>
+                            <in>of_create_pchk.h</in>
+                            <in>of_linear_binary_code.h</in>
+                            <in>of_symbol.c</in>
+                            <in>of_symbol.h</in>
+                          </df>
+                          <df name="statistics">
+                            <in>of_statistics.c</in>
+                            <in>of_statistics.h</in>
+                          </df>
+                          <in>of_cb.h</in>
+                          <in>of_debug.h</in>
+                          <in>of_mem.c</in>
+                          <in>of_mem.h</in>
+                          <in>of_openfec_api.c</in>
+                          <in>of_openfec_api.h</in>
+                          <in>of_openfec_profile.h</in>
+                          <in>of_rand.c</in>
+                          <in>of_rand.h</in>
+                          <in>of_types.h</in>
+                        </df>
+                        <df name="lib_stable">
+                          <df name="2d_parity_matrix">
+                            <in>of_2d_parity.h</in>
+                            <in>of_2d_parity_api.c</in>
+                            <in>of_2d_parity_api.h</in>
+                            <in>of_2d_parity_includes.h</in>
+                            <in>of_codec_profile.h</in>
+                          </df>
+                          <df name="ldpc_staircase">
+                            <in>of_codec_profile.h</in>
+                            <in>of_ldpc_includes.h</in>
+                            <in>of_ldpc_staircase.h</in>
+                            <in>of_ldpc_staircase_api.c</in>
+                            <in>of_ldpc_staircase_api.h</in>
+                            <in>of_ldpc_staircase_pchk.c</in>
+                          </df>
+                          <df name="reed-solomon_gf_2_8">
+                            <in>of_codec_profile.h</in>
+                            <in>of_reed-solomon_gf_2_8.c</in>
+                            <in>of_reed-solomon_gf_2_8.h</in>
+                            <in>of_reed-solomon_gf_2_8_api.c</in>
+                            <in>of_reed-solomon_gf_2_8_api.h</in>
+                            <in>of_reed-solomon_gf_2_8_includes.h</in>
+                          </df>
+                          <df name="reed-solomon_gf_2_m">
+                            <df name="galois_field_codes_utils">
+                              <in>algebra_2_4.c</in>
+                              <in>algebra_2_4.h</in>
+                              <in>algebra_2_8.c</in>
+                              <in>algebra_2_8.h</in>
+                              <in>of_galois_field_code.c</in>
+                              <in>of_galois_field_code.h</in>
+                            </df>
+                            <in>of_codec_profile.h</in>
+                            <in>of_reed-solomon_gf_2_m.h</in>
+                            <in>of_reed-solomon_gf_2_m_api.c</in>
+                            <in>of_reed-solomon_gf_2_m_api.h</in>
+                            <in>of_reed-solomon_gf_2_m_includes.h</in>
+                          </df>
+                        </df>
+                      </df>
+                      <df name="tests">
+                        <in>callback_test.c</in>
+                        <in>code_params_test.c</in>
+                        <in>create_instance_test.c</in>
+                        <in>encoder_instance_test.c</in>
+                      </df>
+                      <df name="tools">
+                        <df name="descr_stats_v1.2">
+                          <in>descr_stats.c</in>
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="bin">
+          <df name="x86_64-pc-linux-gnu">
+          </df>
+        </df>
+        <df name="build">
+          <df name="docs">
+            <df name="lib">
+              <df name="xml">
+              </df>
+            </df>
+            <df name="modules">
+            </df>
+          </df>
+          <df name="x86_64-pc-linux-gnu">
+            <df name="gcc-7.4.0-release">
+              <df name="lib">
+                <df name="example">
+                </df>
+                <df name="src">
+                </df>
+              </df>
+              <df name="modules">
+                <df name="roc_address">
+                  <in>io_uri_parse.cpp</in>
+                </df>
+                <df name="roc_audio">
+                </df>
+                <df name="roc_core">
+                  <df name="target_glibc">
+                    <df name="roc_core">
+                    </df>
+                  </df>
+                  <df name="target_libunwind">
+                    <df name="roc_core">
+                    </df>
+                  </df>
+                  <df name="target_libuv">
+                    <df name="roc_core">
+                    </df>
+                  </df>
+                  <df name="target_posix">
+                    <df name="roc_core">
+                    </df>
+                  </df>
+                  <df name="target_posixtime">
+                    <df name="roc_core">
+                    </df>
+                  </df>
+                  <df name="target_stdio">
+                    <df name="roc_core">
+                    </df>
+                  </df>
+                </df>
+                <df name="roc_fec">
+                  <df name="target_openfec">
+                    <df name="roc_fec">
+                    </df>
+                  </df>
+                </df>
+                <df name="roc_netio">
+                  <df name="target_libuv">
+                    <df name="roc_netio">
+                    </df>
+                  </df>
+                </df>
+                <df name="roc_packet">
+                  <df name="target_posix">
+                    <df name="roc_packet">
+                    </df>
+                  </df>
+                  <df name="target_stdio">
+                    <df name="roc_packet">
+                    </df>
+                  </df>
+                </df>
+                <df name="roc_pipeline">
+                  <df name="target_stdio">
+                    <df name="roc_pipeline">
+                    </df>
+                  </df>
+                </df>
+                <df name="roc_rtp">
+                </df>
+                <df name="roc_sndio">
+                  <df name="target_pulseaudio">
+                    <df name="roc_sndio">
+                    </df>
+                  </df>
+                  <df name="target_sox">
+                    <df name="roc_sndio">
+                    </df>
+                  </df>
+                  <df name="target_stdio">
+                    <df name="roc_sndio">
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="tests">
+                <df name="roc_address">
+                </df>
+                <df name="roc_audio">
+                </df>
+                <df name="roc_core">
+                  <df name="target_posix">
+                  </df>
+                  <df name="target_stdio">
+                  </df>
+                </df>
+                <df name="roc_fec">
+                  <df name="target_openfec">
+                  </df>
+                </df>
+                <df name="roc_lib">
+                </df>
+                <df name="roc_netio">
+                </df>
+                <df name="roc_packet">
+                </df>
+                <df name="roc_pipeline">
+                  <df name="target_stdio">
+                  </df>
+                </df>
+                <df name="roc_rtp">
+                </df>
+                <df name="roc_sndio">
+                  <df name="target_sox">
+                  </df>
+                </df>
+              </df>
+              <df name="tools">
+                <df name="roc_conv">
+                  <in>cmdline.c</in>
+                  <in>cmdline.h</in>
+                </df>
+                <df name="roc_recv">
+                  <in>cmdline.c</in>
+                  <in>cmdline.h</in>
+                </df>
+                <df name="roc_send">
+                  <in>cmdline.c</in>
+                  <in>cmdline.h</in>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="docs">
+          <df name="doxygen">
+          </df>
+          <df name="images">
+          </df>
+          <df name="sphinx">
+            <df name="_images">
+            </df>
+            <df name="_static">
+            </df>
+            <df name="about_project">
+            </df>
+            <df name="api">
+            </df>
+            <df name="building">
+            </df>
+            <df name="development">
+            </df>
+            <df name="internals">
+            </df>
+            <df name="manuals">
+            </df>
+            <df name="portability">
+            </df>
+            <df name="running">
+            </df>
+          </df>
+        </df>
+        <df name="html">
+          <df name="doxygen">
+            <df name="search">
+            </df>
+          </df>
+        </df>
+        <df name="scripts">
+          <df name="travis">
+            <df name="android">
+            </df>
+            <df name="linux-arm">
+            </df>
+            <df name="linux-build-options">
+            </df>
+            <df name="linux-runtime-checks">
+            </df>
+            <df name="linux-x86_64">
+            </df>
+            <df name="macos">
+            </df>
+          </df>
+          <df name="wrappers">
+          </df>
+        </df>
+        <df name="site_scons">
+          <df name="site_tools">
+            <df name="roc">
+            </df>
+          </df>
+        </df>
+        <df name="src">
+          <df name="lib">
+            <df name="example">
+              <in>receiver_sox.c</in>
+              <in>sender_sinewave.c</in>
+            </df>
+            <df name="include">
+              <df name="roc">
+                <in>address.h</in>
+                <in>config.h</in>
+                <in>context.h</in>
+                <in>frame.h</in>
+                <in>log.h</in>
+                <in>platform.h</in>
+                <in>receiver.h</in>
+                <in>sender.h</in>
+              </df>
+            </df>
+            <df name="src">
+              <in>address.cpp</in>
+              <in>config.cpp</in>
+              <in>context.cpp</in>
+              <in>log.cpp</in>
+              <in>private.h</in>
+              <in>receiver.cpp</in>
+              <in>sender.cpp</in>
+            </df>
+          </df>
+          <df name="modules">
+            <df name="roc_address">
+              <in>io_uri.cpp</in>
+              <in>io_uri.h</in>
+              <in>io_uri_format.cpp</in>
+              <in>io_uri_to_str.cpp</in>
+              <in>io_uri_to_str.h</in>
+              <in>pct.cpp</in>
+              <in>pct.h</in>
+            </df>
+            <df name="roc_audio">
+              <in>depacketizer.cpp</in>
+              <in>depacketizer.h</in>
+              <in>frame.cpp</in>
+              <in>frame.h</in>
+              <in>freq_estimator.cpp</in>
+              <in>freq_estimator.h</in>
+              <in>freq_estimator_decim.cpp</in>
+              <in>freq_estimator_decim.h</in>
+              <in>iframe_decoder.cpp</in>
+              <in>iframe_decoder.h</in>
+              <in>iframe_encoder.cpp</in>
+              <in>iframe_encoder.h</in>
+              <in>ireader.cpp</in>
+              <in>ireader.h</in>
+              <in>iwriter.cpp</in>
+              <in>iwriter.h</in>
+              <in>latency_monitor.cpp</in>
+              <in>latency_monitor.h</in>
+              <in>mixer.cpp</in>
+              <in>mixer.h</in>
+              <in>null_writer.cpp</in>
+              <in>null_writer.h</in>
+              <in>packetizer.cpp</in>
+              <in>packetizer.h</in>
+              <in>pcm_decoder.cpp</in>
+              <in>pcm_decoder.h</in>
+              <in>pcm_encoder.cpp</in>
+              <in>pcm_encoder.h</in>
+              <in>pcm_funcs.cpp</in>
+              <in>pcm_funcs.h</in>
+              <in>poison_reader.cpp</in>
+              <in>poison_reader.h</in>
+              <in>poison_writer.cpp</in>
+              <in>poison_writer.h</in>
+              <in>profiling_writer.cpp</in>
+              <in>profiling_writer.h</in>
+              <in>resampler.cpp</in>
+              <in>resampler.h</in>
+              <in>resampler_profile.cpp</in>
+              <in>resampler_profile.h</in>
+              <in>resampler_reader.cpp</in>
+              <in>resampler_reader.h</in>
+              <in>resampler_writer.cpp</in>
+              <in>resampler_writer.h</in>
+              <in>units.cpp</in>
+              <in>units.h</in>
+              <in>watchdog.cpp</in>
+              <in>watchdog.h</in>
+            </df>
+            <df name="roc_core">
+              <df name="target_bionic">
+                <df name="roc_core">
+                  <in>backtrace.cpp</in>
+                </df>
+              </df>
+              <df name="target_darwin">
+                <df name="roc_core">
+                  <in>time.cpp</in>
+                </df>
+              </df>
+              <df name="target_gcc">
+                <df name="roc_core">
+                  <in>atomic.h</in>
+                  <in>attributes.h</in>
+                </df>
+              </df>
+              <df name="target_glibc">
+                <df name="roc_core">
+                  <in>demangle.cpp</in>
+                </df>
+              </df>
+              <df name="target_libunwind">
+                <df name="roc_core">
+                  <in>backtrace.cpp</in>
+                </df>
+              </df>
+              <df name="target_libuv">
+                <df name="roc_core">
+                  <in>cond.h</in>
+                  <in>mutex.h</in>
+                  <in>singleton.h</in>
+                  <in>thread.cpp</in>
+                  <in>thread.h</in>
+                </df>
+              </df>
+              <df name="target_nobacktrace">
+                <df name="roc_core">
+                  <in>backtrace.cpp</in>
+                </df>
+              </df>
+              <df name="target_nodemangle">
+                <df name="roc_core">
+                  <in>demangle.cpp</in>
+                </df>
+              </df>
+              <df name="target_posix">
+                <df name="roc_core">
+                  <in>colors.cpp</in>
+                  <in>colors.h</in>
+                  <in>crash.cpp</in>
+                  <in>crash.h</in>
+                  <in>emergency.cpp</in>
+                  <in>endian.h</in>
+                  <in>errno_to_str.cpp</in>
+                  <in>errno_to_str.h</in>
+                  <in>exit.cpp</in>
+                  <in>exit.h</in>
+                  <in>format_time.cpp</in>
+                  <in>format_time.h</in>
+                  <in>random.cpp</in>
+                  <in>random.h</in>
+                  <in>stddefs.h</in>
+                  <in>temp_file.cpp</in>
+                  <in>temp_file.h</in>
+                </df>
+              </df>
+              <df name="target_posixtime">
+                <df name="roc_core">
+                  <in>time.cpp</in>
+                </df>
+              </df>
+              <df name="target_stdio">
+                <df name="roc_core">
+                  <in>log.cpp</in>
+                  <in>log.h</in>
+                  <in>panic.cpp</in>
+                  <in>panic.h</in>
+                  <in>parse_duration.cpp</in>
+                  <in>parse_duration.h</in>
+                  <in>print_buffer.cpp</in>
+                  <in>print_buffer.h</in>
+                </df>
+              </df>
+              <in>alignment.h</in>
+              <in>array.h</in>
+              <in>backtrace.h</in>
+              <in>buffer.h</in>
+              <in>buffer_pool.h</in>
+              <in>demangle.h</in>
+              <in>heap_allocator.cpp</in>
+              <in>heap_allocator.h</in>
+              <in>helpers.h</in>
+              <in>iallocator.cpp</in>
+              <in>iallocator.h</in>
+              <in>list.h</in>
+              <in>list_node.h</in>
+              <in>noncopyable.h</in>
+              <in>ownership.h</in>
+              <in>pool.h</in>
+              <in>rate_limiter.h</in>
+              <in>refcnt.h</in>
+              <in>scoped_destructor.h</in>
+              <in>scoped_lock.h</in>
+              <in>shared_ptr.h</in>
+              <in>slice.h</in>
+              <in>ticker.h</in>
+              <in>time.h</in>
+              <in>unique_ptr.h</in>
+            </df>
+            <df name="roc_fec">
+              <df name="target_openfec">
+                <df name="roc_fec">
+                  <in>of_decoder.cpp</in>
+                  <in>of_decoder.h</in>
+                  <in>of_encoder.cpp</in>
+                  <in>of_encoder.h</in>
+                </df>
+              </df>
+              <in>codec_config.h</in>
+              <in>codec_map.cpp</in>
+              <in>codec_map.h</in>
+              <in>composer.h</in>
+              <in>headers.h</in>
+              <in>iblock_decoder.cpp</in>
+              <in>iblock_decoder.h</in>
+              <in>iblock_encoder.cpp</in>
+              <in>iblock_encoder.h</in>
+              <in>parser.h</in>
+              <in>reader.cpp</in>
+              <in>reader.h</in>
+              <in>writer.cpp</in>
+              <in>writer.h</in>
+            </df>
+            <df name="roc_netio">
+              <df name="target_libuv">
+                <df name="roc_netio">
+                  <in>basic_port.cpp</in>
+                  <in>basic_port.h</in>
+                  <in>iclose_handler.cpp</in>
+                  <in>iclose_handler.h</in>
+                  <in>transceiver.cpp</in>
+                  <in>transceiver.h</in>
+                  <in>udp_receiver_port.cpp</in>
+                  <in>udp_receiver_port.h</in>
+                  <in>udp_sender_port.cpp</in>
+                  <in>udp_sender_port.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="roc_packet">
+              <df name="target_libuv">
+                <df name="roc_packet">
+                  <in>udp.h</in>
+                </df>
+              </df>
+              <df name="target_posix">
+                <df name="roc_packet">
+                  <in>address.cpp</in>
+                  <in>address.h</in>
+                </df>
+              </df>
+              <df name="target_stdio">
+                <df name="roc_packet">
+                  <in>address_to_str.cpp</in>
+                  <in>address_to_str.h</in>
+                  <in>fec_scheme_to_str.cpp</in>
+                  <in>fec_scheme_to_str.h</in>
+                  <in>print.cpp</in>
+                  <in>print.h</in>
+                </df>
+              </df>
+              <in>concurrent_queue.cpp</in>
+              <in>concurrent_queue.h</in>
+              <in>delayed_reader.cpp</in>
+              <in>delayed_reader.h</in>
+              <in>fec.cpp</in>
+              <in>fec.h</in>
+              <in>icomposer.cpp</in>
+              <in>icomposer.h</in>
+              <in>interleaver.cpp</in>
+              <in>interleaver.h</in>
+              <in>iparser.cpp</in>
+              <in>iparser.h</in>
+              <in>ireader.cpp</in>
+              <in>ireader.h</in>
+              <in>iwriter.cpp</in>
+              <in>iwriter.h</in>
+              <in>packet.cpp</in>
+              <in>packet.h</in>
+              <in>packet_pool.h</in>
+              <in>queue.cpp</in>
+              <in>queue.h</in>
+              <in>router.cpp</in>
+              <in>router.h</in>
+              <in>rtp.cpp</in>
+              <in>rtp.h</in>
+              <in>sorted_queue.cpp</in>
+              <in>sorted_queue.h</in>
+              <in>units.h</in>
+            </df>
+            <df name="roc_pipeline">
+              <df name="target_stdio">
+                <df name="roc_pipeline">
+                  <in>parse_port.cpp</in>
+                  <in>parse_port.h</in>
+                  <in>port_to_str.cpp</in>
+                  <in>port_to_str.h</in>
+                </df>
+              </df>
+              <in>config.h</in>
+              <in>converter.cpp</in>
+              <in>converter.h</in>
+              <in>port.h</in>
+              <in>port_utils.cpp</in>
+              <in>port_utils.h</in>
+              <in>receiver.cpp</in>
+              <in>receiver.h</in>
+              <in>receiver_port.cpp</in>
+              <in>receiver_port.h</in>
+              <in>receiver_session.cpp</in>
+              <in>receiver_session.h</in>
+              <in>sender.cpp</in>
+              <in>sender.h</in>
+              <in>sender_port.cpp</in>
+              <in>sender_port.h</in>
+            </df>
+            <df name="roc_rtp">
+              <in>composer.cpp</in>
+              <in>composer.h</in>
+              <in>format.h</in>
+              <in>format_map.cpp</in>
+              <in>format_map.h</in>
+              <in>headers.h</in>
+              <in>parser.cpp</in>
+              <in>parser.h</in>
+              <in>validator.cpp</in>
+              <in>validator.h</in>
+            </df>
+            <df name="roc_sndio">
+              <df name="target_pulseaudio">
+                <df name="roc_sndio">
+                  <in>pulseaudio_backend.cpp</in>
+                  <in>pulseaudio_backend.h</in>
+                  <in>pulseaudio_sink.cpp</in>
+                  <in>pulseaudio_sink.h</in>
+                </df>
+              </df>
+              <df name="target_sox">
+                <df name="roc_sndio">
+                  <in>sox_backend.cpp</in>
+                  <in>sox_backend.h</in>
+                  <in>sox_sink.cpp</in>
+                  <in>sox_sink.h</in>
+                  <in>sox_source.cpp</in>
+                  <in>sox_source.h</in>
+                </df>
+              </df>
+              <df name="target_stdio">
+                <df name="roc_sndio">
+                  <in>print_drivers.cpp</in>
+                  <in>print_drivers.h</in>
+                </df>
+              </df>
+              <in>backend_dispatcher.cpp</in>
+              <in>backend_dispatcher.h</in>
+              <in>config.h</in>
+              <in>driver_info.cpp</in>
+              <in>driver_info.h</in>
+              <in>ibackend.cpp</in>
+              <in>ibackend.h</in>
+              <in>isink.cpp</in>
+              <in>isink.h</in>
+              <in>isource.cpp</in>
+              <in>isource.h</in>
+              <in>pump.cpp</in>
+              <in>pump.h</in>
+            </df>
+          </df>
+          <df name="pulse">
+            <in>module-roc-sink-input.c</in>
+            <in>module-roc-sink.c</in>
+            <in>module_helpers.c</in>
+            <in>module_helpers.h</in>
+          </df>
+          <df name="tests">
+            <df name="roc_address">
+              <in>test_io_uri.cpp</in>
+              <in>test_pct.cpp</in>
+            </df>
+            <df name="roc_audio">
+              <in>test_awgn.h</in>
+              <in>test_depacketizer.cpp</in>
+              <in>test_fft.cpp</in>
+              <in>test_fft.h</in>
+              <in>test_frame_encoder_decoder.cpp</in>
+              <in>test_freq_estimator.cpp</in>
+              <in>test_median.h</in>
+              <in>test_mixer.cpp</in>
+              <in>test_mock_reader.h</in>
+              <in>test_packetizer.cpp</in>
+              <in>test_pcm_funcs.cpp</in>
+              <in>test_resampler.cpp</in>
+              <in>test_watchdog.cpp</in>
+            </df>
+            <df name="roc_core">
+              <df name="target_posix">
+                <in>test_format_time.cpp</in>
+              </df>
+              <df name="target_stdio">
+                <in>test_parse_duration.cpp</in>
+              </df>
+              <in>test_array.cpp</in>
+              <in>test_atomic.cpp</in>
+              <in>test_list_operations.cpp</in>
+              <in>test_list_ownership.cpp</in>
+              <in>test_pool.cpp</in>
+              <in>test_time.cpp</in>
+            </df>
+            <df name="roc_fec">
+              <df name="target_openfec">
+                <in>test_encoder_decoder.cpp</in>
+                <in>test_fec_schemes.h</in>
+                <in>test_mock_allocator.h</in>
+                <in>test_packet_dispatcher.h</in>
+                <in>test_writer_reader.cpp</in>
+              </df>
+              <in>test_composer.cpp</in>
+              <in>test_composer_parser.cpp</in>
+            </df>
+            <df name="roc_lib">
+              <in>test_address.cpp</in>
+              <in>test_context.cpp</in>
+              <in>test_sender_receiver.cpp</in>
+            </df>
+            <df name="roc_netio">
+              <in>test_transceiver.cpp</in>
+              <in>test_udp.cpp</in>
+            </df>
+            <df name="roc_packet">
+              <in>test_address.cpp</in>
+              <in>test_concurrent_queue.cpp</in>
+              <in>test_delayed_reader.cpp</in>
+              <in>test_interleaver.cpp</in>
+              <in>test_router.cpp</in>
+              <in>test_sorted_queue.cpp</in>
+              <in>test_units.cpp</in>
+            </df>
+            <df name="roc_pipeline">
+              <df name="target_stdio">
+                <in>test_port.cpp</in>
+              </df>
+              <in>test_converter.cpp</in>
+              <in>test_frame_checker.h</in>
+              <in>test_frame_reader.h</in>
+              <in>test_frame_writer.h</in>
+              <in>test_helpers.h</in>
+              <in>test_packet_reader.h</in>
+              <in>test_packet_sender.h</in>
+              <in>test_packet_writer.h</in>
+              <in>test_receiver.cpp</in>
+              <in>test_sender.cpp</in>
+              <in>test_sender_receiver.cpp</in>
+            </df>
+            <df name="roc_rtp">
+              <df name="test_packets">
+                <in>rtp_l16_1ch_10s_12ext.h</in>
+                <in>rtp_l16_1ch_10s_4pad_2csrc_12ext_marker.h</in>
+                <in>rtp_l16_2ch_300s_80pad.h</in>
+                <in>rtp_l16_2ch_320s.h</in>
+              </df>
+              <in>test_packet_formats.cpp</in>
+              <in>test_packet_info.h</in>
+              <in>test_validator.cpp</in>
+            </df>
+            <df name="roc_sndio">
+              <df name="target_sox">
+                <in>test_mock_sink.h</in>
+                <in>test_mock_source.h</in>
+                <in>test_pump.cpp</in>
+                <in>test_sox_sink.cpp</in>
+                <in>test_sox_source.cpp</in>
+              </df>
+            </df>
+            <in>test_main.cpp</in>
+          </df>
+          <df name="tools">
+            <df name="roc_conv">
+              <in>main.cpp</in>
+            </df>
+            <df name="roc_recv">
+              <in>main.cpp</in>
+            </df>
+            <df name="roc_send">
+              <in>main.cpp</in>
+            </df>
+          </df>
+        </df>
+        <df name="vendor">
         </df>
       </df>
       <df name="vstgui">
@@ -1634,6 +2652,7 @@
           <in>vstgui_win32.cpp</in>
         </df>
       </df>
+      <in>Sender.cpp</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

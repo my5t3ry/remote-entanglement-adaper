@@ -524,11 +524,12 @@
         </df>
       </df>
       <df name="plugins">
-        <df name="remoteEntanglement">
-          <in>RemoteEntanglement.cpp</in>
-          <in>RemoteEntanglement.h</in>
+        <df name="RemoteEntanglement">
+          <in>RemoteEntanglementPlugin.cpp</in>
+          <in>RemoteEntanglementPlugin.h</in>
         </df>
       </df>
+      <in>Sender.cpp</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -564,6 +565,8 @@
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
+      <item path="Sender.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="lib/dpf/dgl/src/Application.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="lib/dpf/dgl/src/Cairo.cpp" ex="false" tool="1" flavor2="0">
@@ -2320,12 +2323,12 @@
       </item>
       <item path="lib/vstgui/vstgui/vstgui_win32.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="plugins/remoteEntanglement/RemoteEntanglement.cpp"
+      <item path="plugins/RemoteEntanglement/RemoteEntanglementPlugin.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="plugins/remoteEntanglement/RemoteEntanglement.h"
+      <item path="plugins/RemoteEntanglement/RemoteEntanglementPlugin.h"
             ex="false"
             tool="3"
             flavor2="0">

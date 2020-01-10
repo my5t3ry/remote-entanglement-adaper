@@ -4,3 +4,6 @@
 [submodule "dpf"]
 	path = dpf
 	url = https://git.kx.studio/DISTRHO/DPF.git
+[submodule "roc"]
+	path = roc
+	url = https://github.com/roc-project/roc.git
