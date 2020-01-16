@@ -1,34 +1,35 @@
 /*
- * DISTRHO MVerb, a DPF'ied MVerb.
- * Copyright (c) 2010 Martin Eastwood
- * Copyright (C) 2015 Filipe Coelho <falktx@falktx.com>
+ * DISTRHO Plugin Framework (DPF)
+ * Copyright (C) 2012-2019 Filipe Coelho <falktx@falktx.com>
  *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 3 of
- * the License, or any later version.
+ * Permission to use, copy, modify, and/or distribute this software for any purpose with
+ * or without fee is hereby granted, provided that the above copyright notice and this
+ * permission notice appear in all copies.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * For a full copy of the GNU General Public License see the LICENSE file.
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD
+ * TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN
+ * NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+ * DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER
+ * IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
 #ifndef DISTRHO_PLUGIN_INFO_H_INCLUDED
 #define DISTRHO_PLUGIN_INFO_H_INCLUDED
 
 #define DISTRHO_PLUGIN_BRAND "miko"
-#define DISTRHO_PLUGIN_NAME  "RemoteEntanglementPlugin"
-#define DISTRHO_PLUGIN_URI   "http://misckonsum.org"
+#define DISTRHO_PLUGIN_NAME  "RemoteEntanglement"
+#define DISTRHO_PLUGIN_URI   "http://mischkonsum.org"
 
-#define DISTRHO_PLUGIN_HAS_UI        1
-#define DISTRHO_PLUGIN_IS_RT_SAFE    1
-#define DISTRHO_PLUGIN_NUM_INPUTS    2
-#define DISTRHO_PLUGIN_NUM_OUTPUTS   2
-#define DISTRHO_PLUGIN_WANT_PROGRAMS 0
+#define DISTRHO_PLUGIN_HAS_UI      1
+#define DISTRHO_PLUGIN_IS_RT_SAFE  1
+#define DISTRHO_PLUGIN_NUM_INPUTS  2
+#define DISTRHO_PLUGIN_NUM_OUTPUTS 2
+#define DISTRHO_PLUGIN_WANT_STATE  1
+#define DISTRHO_UI_USER_RESIZABLE  1
+#define DISTRHO_UI_USE_NANOVG      1
 
-#define DISTRHO_PLUGIN_LV2_CATEGORY "lv2:ReverbPlugin"
+#define METER_COLOR_GREEN 0
+#define METER_COLOR_BLUE  1
 
 #endif // DISTRHO_PLUGIN_INFO_H_INCLUDED
