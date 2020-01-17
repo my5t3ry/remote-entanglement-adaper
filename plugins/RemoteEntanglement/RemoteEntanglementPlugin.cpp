@@ -26,7 +26,7 @@
 
 #define METER_COLOR_GREEN 0
 #define METER_COLOR_BLUE  1
-#define EXAMPLE_SENDER_PORT 20003
+#define EXAMPLE_SENDER_PORT 0
 
 /* Receiver parameters. */
 #define SERVER_RECEIVER_IP "0.0.0.0"
