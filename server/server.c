@@ -33,10 +33,12 @@
 
 /* Receiver parameters. */
 #define EXAMPLE_RECEIVER_IP "0.0.0.0"
-#define EXAMPLE_RECEIVER_SOURCE_PORT 10001
-#define EXAMPLE_RECEIVER_REPAIR_PORT 10002
+#define EXAMPLE_SERVER_RECEIVER_SOURCE_PORT 10000
+#define EXAMPLE_SERVER_RECEIVER_REPAIR_PORT 10001
+
+
 #define EXAMPLE_SENDER_IP "0.0.0.0"
-#define EXAMPLE_SENDER_PORT 0
+#define EXAMPLE_SENDER_PORT 30000
 
 /* Player parameters. */
 #define EXAMPLE_OUTPUT_DEVICE "default"
@@ -45,9 +47,9 @@
 #define EXAMPLE_NUM_CHANNELS 2
 #define EXAMPLE_BUFFER_SIZE 1000
 
-#define EXAMPLE_CLIENT_RECEIVER_IP "127.0.0.1"
-#define EXAMPLE_CLIENT_RECEIVER_SOURCE_PORT 10003
-#define EXAMPLE_CLIENT_RECEIVER_REPAIR_PORT 10004
+#define EXAMPLE_CLIENT_RECEIVER_IP "0.0.0.0"
+#define EXAMPLE_CLIENT_RECEIVER_SOURCE_PORT 20000
+#define EXAMPLE_CLIENT_RECEIVER_REPAIR_PORT 20001
 
 /* Signal parameters */
 #define EXAMPLE_SAMPLE_RATE 44100
@@ -176,7 +178,7 @@ int main() {
      * Source Payload ID on this port. */
     roc_address recv_source_addr;
     if (roc_address_init(&recv_source_addr, ROC_AF_AUTO, EXAMPLE_RECEIVER_IP,
-                         EXAMPLE_RECEIVER_SOURCE_PORT)
+                         EXAMPLE_SERVER_RECEIVER_SOURCE_PORT)
         != 0) {
         oops("roc_address_init");
     }
@@ -191,7 +193,7 @@ int main() {
      * Repair Payload ID on this port. */
     roc_address recv_repair_addr;
     if (roc_address_init(&recv_repair_addr, ROC_AF_AUTO, EXAMPLE_RECEIVER_IP,
-                         EXAMPLE_RECEIVER_REPAIR_PORT)
+                         EXAMPLE_SERVER_RECEIVER_REPAIR_PORT)
         != 0) {
         oops("roc_address_init");
     }
