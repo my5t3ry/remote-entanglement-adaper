@@ -22,14 +22,14 @@
 #include <roc/receiver.h>
 
 
-#define EXAMPLE_SENDER_IP "0.0.0.0"
+#define EXAMPLE_SENDER_IP " 10.0.1.2"
 
 #define METER_COLOR_GREEN 0
 #define METER_COLOR_BLUE  1
 #define EXAMPLE_SENDER_PORT 0
 
 /* Receiver parameters. */
-#define SERVER_RECEIVER_IP "0.0.0.0"
+#define SERVER_RECEIVER_IP " 10.0.1.1"
 #define EXAMPLE_CLIENT_SERVER_SOURCE_PORT 10000
 #define EXAMPLE_CLIENT_SERVER_REPAIR_PORT 10001
 
@@ -42,7 +42,7 @@
 #define EXAMPLE_SINE_SAMPLES (EXAMPLE_SAMPLE_RATE * 5)
 #define EXAMPLE_BUFFER_SIZE 100
 
-#define EXAMPLE_RECEIVER_IP "0.0.0.0"
+#define EXAMPLE_RECEIVER_IP " 10.0.1.2"
 #define EXAMPLE_RECEIVER_SOURCE_PORT 20000
 #define EXAMPLE_RECEIVER_REPAIR_PORT 20001
 
@@ -284,16 +284,17 @@ protected:
         }
 
         /* Initialize SoX parameters. */
-
-        /* Destroy receiver. */
-        if (roc_receiver_close(receiver_) != 0) {
-            log("roc_receiver_close");
-        }
-
-        /* Destroy context. */
-        if (roc_context_close(context) != 0) {
-            log("roc_context_close");
-        }
+//        
+//
+//        /* Destroy receiver. */
+//        if (roc_receiver_close(receiver_) != 0) {
+//            log("roc_receiver_close");
+//        }
+//
+//        /* Destroy context. */
+//        if (roc_context_close(context) != 0) {
+//            log("roc_context_close");
+//        }
 
     }
 
