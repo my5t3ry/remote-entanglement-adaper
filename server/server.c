@@ -38,7 +38,7 @@
 
 
 #define EXAMPLE_SENDER_IP "0.0.0.0"
-#define EXAMPLE_SENDER_PORT 
+#define EXAMPLE_SENDER_PORT 0 
 
 /* Player parameters. */
 #define EXAMPLE_OUTPUT_DEVICE "default"
