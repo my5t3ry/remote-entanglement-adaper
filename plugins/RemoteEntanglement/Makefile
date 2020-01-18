@@ -22,7 +22,8 @@ BUILD_JACK ?= true
 BUILD_DSSI ?= true
 BUILD_LADSPA ?= false
 
-ROC_PATH=../../roc/build/x86_64-pc-linux-gnu/gcc-8.3.0-release/libroc_unstripped.so.0.1
+
+ROC_PATH=../../roc/build/x86_64-pc-linux-gnu/clang-7.0.1-release/libroc_unstripped.so.0.1
 LDFLAGS = $(ROC_PATH)
 CXXFLAGS = -I../../roc/src/modules/
 
