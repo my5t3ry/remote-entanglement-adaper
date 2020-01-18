@@ -12,6 +12,7 @@
 /** \file */
 
 #pragma once
+
 #include <nanogui/common.h>
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
@@ -31,7 +32,6 @@
 #endif // DOXYGEN_SHOULD_SKIP_THIS
 
 #include <GLFW/glfw3.h>
-// #include <nanovg/nanovg.h>
 
 // Special treatment of linux Nvidia opengl headers
 #if !defined(_WIN32) && !defined(__APPLE__)

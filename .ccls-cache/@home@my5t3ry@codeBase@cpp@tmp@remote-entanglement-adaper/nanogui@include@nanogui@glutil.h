@@ -13,7 +13,6 @@
 #pragma once
 
 #include <nanogui/opengl.h>
-#include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Geometry>
 #include <map>
 

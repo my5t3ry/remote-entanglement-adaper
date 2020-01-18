@@ -30,7 +30,7 @@ NANOVG_PATH=../../nanovg/build/libnanovg.so
 CXXFLAGS = -I../../nanovg/src/
 
 NANOGUI_PATH=../../nanogui/build/libnanogui.so
-LDFLAGS = $(NANOVG_PATH)  $(NANOGUI_PATH) $(ROC_PATH)
+LDFLAGS = $(NANOVG_PATH) $(NANOGUI_PATH) $(ROC_PATH)
 CXXFLAGS = -I../../nanogui/include/
 
 # --------------------------------------------------------------
