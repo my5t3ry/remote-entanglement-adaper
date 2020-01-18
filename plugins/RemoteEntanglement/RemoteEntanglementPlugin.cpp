@@ -22,6 +22,9 @@
 #include <roc/receiver.h>
 
 
+#include "RemoteEntanglementPluginParams.hpp"
+
+
 #define EXAMPLE_SENDER_IP "0.0.0.0"
 
 #define METER_COLOR_GREEN 0
@@ -284,7 +287,7 @@ protected:
         }
 
         /* Initialize SoX parameters. */
-        //        
+        //
         //
         //        /* Destroy receiver. */
         //        if (roc_receiver_close(receiver_) != 0) {

@@ -1,255 +1,482 @@
-/*
- * DISTRHO Plugin Framework (DPF)
- * Copyright (C) 2012-2019 Filipe Coelho <falktx@falktx.com>
- *
- * Permission to use, copy, modify, and/or distribute this software for any purpose with
- * or without fee is hereby granted, provided that the above copyright notice and this
- * permission notice appear in all copies.
- *
- * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD
- * TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN
- * NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
- * DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER
- * IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
- * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
- */
-
 #include "DistrhoUI.hpp"
+#include "RemoteEntanglementPluginParams.hpp"
+#include "RemoteEntanglementPluginUi.hpp"
+#include "Window.hpp"
+#include "Config.hpp"
+#include "Margin.hpp"
+#include "Fonts/chivo_bold.hpp"
+
+#include <string>
+
+#if defined(DISTRHO_OS_WINDOWS)
+#include "windows.h"
+#endif
 
 START_NAMESPACE_DISTRHO
 
-/**
-  We need the Color class from DGL.
- */
-using DGL_NAMESPACE::Color;
+RemoteEntanglementPluginUi::RemoteEntanglementPluginUi() : UI(611, 662),
+fBottomBarVisible(true) {
+    const uint minWidth = 611;
+    const uint minHeight = 438;
 
-/**
-  Smooth meters a bit.
- */
-static const float kSmoothMultiplier = 3.0f;
+    const uint knobsLabelBoxWidth = 66;
+    const uint knobsLabelBoxHeight = 21;
 
-// -----------------------------------------------------------------------------------------------------------
+    loadSharedResources();
 
-class RemoteEntanglementPluginUi : public UI
-{
-public:
-    RemoteEntanglementPluginUi()
-        : UI(128, 512),
-          // default color is green
-          fColor(93, 231, 61),
-          // which is value 0
-          fColorValue(0),
-          // init meter values to 0
-          fOutLeft(0.0f),
-          fOutRight(0.0f)
-    {
-        setGeometryConstraints(32, 128, false);
-    }
+    using namespace WOLF_FONTS;
+    NanoVG::FontId chivoBoldId = createFontFromMemory("chivo_bold", (const uchar *) chivo_bold, chivo_bold_size, 0);
+    NanoVG::FontId dejaVuSansId = findFont(NANOVG_DEJAVU_SANS_TTF);
 
-protected:
-   /* --------------------------------------------------------------------------------------------------------
-    * DSP/Plugin Callbacks */
+    WolfShaperConfig::load();
 
-   /**
-      A parameter has changed on the plugin side.
-      This is called by the host to inform the UI about parameter changes.
-    */
-    void parameterChanged(uint32_t index, float value) override
-    {
-        switch (index)
-        {
-        case 0: // color
-            updateColor(std::round(value));
-            break;
+    tryRememberSize();
+    getParentWindow().saveSizeAtExit(true);
 
-        case 1: // out-left
-            value = (fOutLeft * kSmoothMultiplier + value) / (kSmoothMultiplier + 1.0f);
+    const float width = getWidth();
+    const float height = getHeight();
 
-            /**/ if (value < 0.001f) value = 0.0f;
-            else if (value > 0.999f) value = 1.0f;
+    fGraphWidget = new GraphWidget(this, Size<uint>(width - 4 * 2, height - 4 * 2 - 122));
 
-            if (fOutLeft != value)
-            {
-                fOutLeft = value;
-                repaint();
-            }
-            break;
+    const float graphBarHeight = 42;
 
-        case 2: // out-right
-            value = (fOutRight * kSmoothMultiplier + value) / (kSmoothMultiplier + 1.0f);
+    fGraphBar = new WidgetBar(this, Size<uint>(width, graphBarHeight));
+    fGraphBar->setStrokePaint(linearGradient(0, 0, 0, graphBarHeight, Color(43, 43, 43, 255), Color(34, 34, 34, 255)));
+    fGraphBar->setStrokeWidth(4.0f);
 
-            /**/ if (value < 0.001f) value = 0.0f;
-            else if (value > 0.999f) value = 1.0f;
+    fSwitchRemoveDC = new RemoveDCSwitch(this, Size<uint>(30, 29));
+    fSwitchRemoveDC->setCallback(this);
+    fSwitchRemoveDC->setId(paramRemoveDC);
 
-            if (fOutRight != value)
-            {
-                fOutRight = value;
-                repaint();
-            }
-            break;
-        }
-    }
+    fLabelRemoveDC = new NanoLabel(this, Size<uint>(100, 29));
+    fLabelRemoveDC->setText("CENTER");
+    fLabelRemoveDC->setFontId(chivoBoldId);
+    fLabelRemoveDC->setFontSize(14.0f);
+    fLabelRemoveDC->setAlign(ALIGN_LEFT | ALIGN_MIDDLE);
+    fLabelRemoveDC->setMargin(Margin(3, 0, fSwitchRemoveDC->getWidth() / 2.0f, 0));
 
-   /**
-      A state has changed on the plugin side.
-      This is called by the host to inform the UI about state changes.
-    */
-    void stateChanged(const char*, const char*) override
-    {
-        // nothing here
-    }
+    fSwitchBipolarMode = new BipolarModeSwitch(this, Size<uint>(16, 34));
+    fSwitchBipolarMode->setCallback(this);
+    fSwitchBipolarMode->setId(paramBipolarMode);
 
-   /* --------------------------------------------------------------------------------------------------------
-    * Widget Callbacks */
+    fLabelsBoxBipolarMode = new GlowingLabelsBox(this, Size<uint>(34, 42));
+    fLabelsBoxBipolarMode->setLabels({"UNI", "BI"});
 
-   /**
-      The NanoVG drawing function.
-    */
-    void onNanoDisplay() override
-    {
-        static const Color kColorBlack(0, 0, 0);
-        static const Color kColorRed(255, 0, 0);
-        static const Color kColorYellow(255, 255, 0);
+    fLabelPreGain = new LabelBox(this, Size<uint>(knobsLabelBoxWidth, knobsLabelBoxHeight));
+    fLabelPreGain->setText("PRE");
 
-        // get meter values
-        const float outLeft(fOutLeft);
-        const float outRight(fOutRight);
+    fKnobPreGain = new VolumeKnob(this, Size<uint>(54, 54));
+    fKnobPreGain->setCallback(this);
+    fKnobPreGain->setRange(0.0f, 2.0f);
+    fKnobPreGain->setId(paramPreGain);
+    fKnobPreGain->setColor(Color(255, 197, 246, 255));
 
-        // tell DSP side to reset meter values
-        setState("reset", "");
+    fLabelWet = new LabelBox(this, Size<uint>(knobsLabelBoxWidth, knobsLabelBoxHeight));
+    fLabelWet->setText("WET");
 
-        // useful vars
-        const float halfWidth        = static_cast<float>(getWidth())/2;
-        const float redYellowHeight  = static_cast<float>(getHeight())*0.2f;
-        const float yellowBaseHeight = static_cast<float>(getHeight())*0.4f;
-        const float baseBaseHeight   = static_cast<float>(getHeight())*0.6f;
+    fKnobWet = new VolumeKnob(this, Size<uint>(54, 54));
+    fKnobWet->setCallback(this);
+    fKnobWet->setRange(0.0f, 1.0f);
+    fKnobWet->setId(paramWet);
+    fKnobWet->setColor(Color(136, 228, 255));
 
-        // create gradients
-        Paint fGradient1 = linearGradient(0.0f, 0.0f,            0.0f, redYellowHeight,  kColorRed,    kColorYellow);
-        Paint fGradient2 = linearGradient(0.0f, redYellowHeight, 0.0f, yellowBaseHeight, kColorYellow, fColor);
+    fLabelPostGain = new LabelBox(this, Size<uint>(knobsLabelBoxWidth, knobsLabelBoxHeight));
+    fLabelPostGain->setText("POST");
 
-        // paint left meter
-        beginPath();
-        rect(0.0f, 0.0f, halfWidth-1.0f, redYellowHeight);
-        fillPaint(fGradient1);
-        fill();
-        closePath();
+    fKnobPostGain = new VolumeKnob(this, Size<uint>(54, 54));
+    fKnobPostGain->setCallback(this);
+    fKnobPostGain->setRange(0.0f, 1.0f);
+    fKnobPostGain->setId(paramPostGain);
+    fKnobPostGain->setColor(Color(143, 255, 147, 255));
 
-        beginPath();
-        rect(0.0f, redYellowHeight-0.5f, halfWidth-1.0f, yellowBaseHeight);
-        fillPaint(fGradient2);
-        fill();
-        closePath();
+    fKnobHorizontalWarp = new VolumeKnob(this, Size<uint>(54, 54));
+    fKnobHorizontalWarp->setCallback(this);
+    fKnobHorizontalWarp->setRange(0.0f, 1.0f);
+    fKnobHorizontalWarp->setId(paramHorizontalWarpAmount);
+    fKnobHorizontalWarp->setColor(Color(255, 225, 169, 255));
 
-        beginPath();
-        rect(0.0f, redYellowHeight+yellowBaseHeight-1.5f, halfWidth-1.0f, baseBaseHeight);
-        fillColor(fColor);
-        fill();
-        closePath();
+    fLabelListHorizontalWarpType = new LabelBoxList(this, Size<uint>(knobsLabelBoxWidth + 3, knobsLabelBoxHeight));
+    fLabelListHorizontalWarpType->setLabels({"–", "BEND +", "BEND -", "BEND +/-", "SKEW +", "SKEW -", "SKEW +/-"});
 
-        // paint left black matching output level
-        beginPath();
-        rect(0.0f, 0.0f, halfWidth-1.0f, (1.0f-outLeft)*getHeight());
-        fillColor(kColorBlack);
-        fill();
-        closePath();
+    fKnobVerticalWarp = new VolumeKnob(this, Size<uint>(54, 54));
+    fKnobVerticalWarp->setCallback(this);
+    fKnobVerticalWarp->setRange(0.0f, 1.0f);
+    fKnobVerticalWarp->setId(paramVerticalWarpAmount);
+    fKnobVerticalWarp->setColor(Color(255, 225, 169, 255));
 
-        // paint right meter
-        beginPath();
-        rect(halfWidth+1.0f, 0.0f, halfWidth-2.0f, redYellowHeight);
-        fillPaint(fGradient1);
-        fill();
-        closePath();
+    fLabelListVerticalWarpType = new LabelBoxList(this, Size<uint>(knobsLabelBoxWidth + 3, knobsLabelBoxHeight));
+    fLabelListVerticalWarpType->setLabels({"–", "BEND +", "BEND -", "BEND +/-", "SKEW +", "SKEW -", "SKEW +/-"});
 
-        beginPath();
-        rect(halfWidth+1.0f, redYellowHeight-0.5f, halfWidth-2.0f, yellowBaseHeight);
-        fillPaint(fGradient2);
-        fill();
-        closePath();
+    fButtonLeftArrowHorizontalWarp = new ArrowButton(this, Size<uint>(knobsLabelBoxHeight, knobsLabelBoxHeight));
+    fButtonLeftArrowHorizontalWarp->setCallback(this);
+    fButtonLeftArrowHorizontalWarp->setId(paramHorizontalWarpType);
+    fButtonLeftArrowHorizontalWarp->setArrowDirection(ArrowButton::Left);
 
-        beginPath();
-        rect(halfWidth+1.0f, redYellowHeight+yellowBaseHeight-1.5f, halfWidth-2.0f, baseBaseHeight);
-        fillColor(fColor);
-        fill();
-        closePath();
+    fButtonRightArrowHorizontalWarp = new ArrowButton(this, Size<uint>(knobsLabelBoxHeight, knobsLabelBoxHeight));
+    fButtonRightArrowHorizontalWarp->setCallback(this);
+    fButtonRightArrowHorizontalWarp->setId(paramHorizontalWarpType);
+    fButtonRightArrowHorizontalWarp->setArrowDirection(ArrowButton::Right);
 
-        // paint right black matching output level
-        beginPath();
-        rect(halfWidth+1.0f, 0.0f, halfWidth-2.0f, (1.0f-outRight)*getHeight());
-        fillColor(kColorBlack);
-        fill();
-        closePath();
-    }
+    fButtonLeftArrowVerticalWarp = new ArrowButton(this, Size<uint>(knobsLabelBoxHeight, knobsLabelBoxHeight));
+    fButtonLeftArrowVerticalWarp->setCallback(this);
+    fButtonLeftArrowVerticalWarp->setId(paramVerticalWarpType);
+    fButtonLeftArrowVerticalWarp->setArrowDirection(ArrowButton::Left);
 
-   /**
-      Mouse press event.
-      This UI will change color when clicked.
-    */
-    bool onMouse(const MouseEvent& ev) override
-    {
-        // Test for left-clicked + pressed first.
-        if (ev.button != 1 || ! ev.press)
-            return false;
+    fButtonRightArrowVerticalWarp = new ArrowButton(this, Size<uint>(knobsLabelBoxHeight, knobsLabelBoxHeight));
+    fButtonRightArrowVerticalWarp->setCallback(this);
+    fButtonRightArrowVerticalWarp->setId(paramVerticalWarpType);
+    fButtonRightArrowVerticalWarp->setArrowDirection(ArrowButton::Right);
 
-        const int newColor(fColorValue == 0 ? 1 : 0);
-        updateColor(newColor);
-        setParameterValue(0, newColor);
+    fHandleResize = new ResizeHandle(this, Size<uint>(18, 18));
+    fHandleResize->setCallback(this);
+    fHandleResize->setMinSize(minWidth, minHeight);
 
-        return true;
-    }
+    fButtonResetGraph = new ResetGraphButton(this, Size<uint>(32, 32));
+    fButtonResetGraph->setCallback(this);
 
-    // -------------------------------------------------------------------------------------------------------
+    fLabelButtonResetGraph = new NanoLabel(this, Size<uint>(50, fButtonResetGraph->getHeight()));
+    fLabelButtonResetGraph->setText("RESET");
+    fLabelButtonResetGraph->setFontId(dejaVuSansId);
+    fLabelButtonResetGraph->setFontSize(15.0f);
+    fLabelButtonResetGraph->setAlign(ALIGN_LEFT | ALIGN_MIDDLE);
+    fLabelButtonResetGraph->setMargin(Margin(6, 0, std::round(fButtonResetGraph->getHeight() / 2.0f) + 1, 0));
 
-private:
-   /**
-      Color and its matching parameter value.
-    */
-    Color fColor;
-    int   fColorValue;
+    fWheelOversample = new OversampleWheel(this, Size<uint>(47, 26));
+    fWheelOversample->setCallback(this);
+    fWheelOversample->setRange(0, 4);
 
-   /**
-      Meter values.
-      These are the parameter outputs from the DSP side.
-    */
-    float fOutLeft, fOutRight;
+    fLabelWheelOversample = new NanoLabel(this, Size<uint>(85, 26));
+    fLabelWheelOversample->setText("OVERSAMPLE");
+    fLabelWheelOversample->setFontId(chivoBoldId);
+    fLabelWheelOversample->setFontSize(14.0f);
+    fLabelWheelOversample->setAlign(ALIGN_LEFT | ALIGN_MIDDLE);
+    fLabelWheelOversample->setMargin(Margin(0, 0, fLabelWheelOversample->getHeight() / 2.0f, 0));
 
-   /**
-      Update color if needed.
-    */
-    void updateColor(const int color)
-    {
-        if (fColorValue == color)
-            return;
-
-        fColorValue = color;
-
-        switch (color)
-        {
-        case METER_COLOR_GREEN:
-            fColor = Color(93, 231, 61);
-            break;
-        case METER_COLOR_BLUE:
-            fColor = Color(82, 238, 248);
-            break;
-        }
-
-        repaint();
-    }
-
-   /**
-      Set our UI class as non-copyable and add a leak detector just in case.
-    */
-    DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(RemoteEntanglementPluginUi)
-};
-
-/* ------------------------------------------------------------------------------------------------------------
- * UI entry point, called by DPF to create a new UI instance. */
-
-UI* createUI()
-{
-    return new RemoteEntanglementPluginUi();
+    positionWidgets(width, height);
 }
 
-// -----------------------------------------------------------------------------------------------------------
+RemoteEntanglementPluginUi::~RemoteEntanglementPluginUi() {
+}
+
+void RemoteEntanglementPluginUi::tryRememberSize() {
+    int width, height;
+    FILE *file;
+    std::string tmpFileName = PLUGIN_NAME ".tmp";
+
+#if defined(DISTRHO_OS_WINDOWS)
+    CHAR tempPath[MAX_PATH + 1];
+
+    GetTempPath(MAX_PATH + 1, tempPath);
+    std::string path = std::string(tempPath) + tmpFileName;
+    file = fopen(path.c_str(), "r");
+#else
+    file = fopen(("/tmp/" + tmpFileName).c_str(), "r");
+#endif
+
+    if (file == NULL)
+        return;
+
+    const int numberScanned = fscanf(file, "%d %d", &width, &height);
+
+    if (numberScanned == 2 && width && height) {
+        setSize(width, height);
+    }
+
+    fclose(file);
+}
+
+void RemoteEntanglementPluginUi::positionWidgets(uint width, uint height) {
+    //TODO: Clean that up
+
+    const float graphMargin = 8;
+    const float bottomBarSize = fBottomBarVisible ? 102 : 0;
+    const float graphBarHeight = fGraphBar->getHeight();
+    const float graphBarMargin = 6;
+
+    fGraphWidget->setSize(width - graphMargin * 2, height - graphMargin * 2 - bottomBarSize - graphBarHeight);
+    fGraphWidget->setAbsolutePos(graphMargin, graphMargin);
+
+    const float graphBottom = fGraphWidget->getAbsoluteY() + fGraphWidget->getHeight();
+
+    fGraphBar->setWidth(width);
+    fGraphBar->setAbsolutePos(0, graphBottom + graphBarMargin);
+    fGraphBar->setFillPaint(radialGradient(width / 2.0f, graphBarHeight / 2.0f, graphBarHeight, width / 2.0f, Color(71, 74, 80, 255), Color(40, 42, 46, 255)));
+
+    const float knobLabelMarginBottom = 12;
+
+    fSwitchRemoveDC->setAbsolutePos(24, height - 38);
+    fLabelRemoveDC->setAbsolutePos(24 + fSwitchRemoveDC->getWidth(), height - 38);
+
+    fSwitchBipolarMode->setAbsolutePos(31, height - 86);
+    fLabelsBoxBipolarMode->setAbsolutePos(53, height - 90);
+
+    const float graphBarMiddleY = fGraphBar->getAbsoluteY() + fGraphBar->getHeight() / 2.0f;
+
+    fButtonResetGraph->setAbsolutePos(20, graphBarMiddleY - fButtonResetGraph->getHeight() / 2.0f);
+    fLabelButtonResetGraph->setAbsolutePos(fButtonResetGraph->getAbsoluteX() + fButtonResetGraph->getWidth(), fButtonResetGraph->getAbsoluteY());
+
+    fWheelOversample->setAbsolutePos(width - fWheelOversample->getWidth() - 35, graphBarMiddleY - fWheelOversample->getHeight() / 2.0f);
+    fLabelWheelOversample->setAbsolutePos(fWheelOversample->getAbsoluteX() - fLabelWheelOversample->getWidth(), fWheelOversample->getAbsoluteY());
+
+    float centerAlignDifference = (fLabelPreGain->getWidth() - fKnobPreGain->getWidth()) / 2.0f;
+
+    fKnobPreGain->setAbsolutePos(width - 225, height - 90);
+    fLabelPreGain->setAbsolutePos(width - 225 - centerAlignDifference, height - fLabelPreGain->getHeight() - knobLabelMarginBottom);
+
+    centerAlignDifference = (fLabelWet->getWidth() - fKnobWet->getWidth()) / 2.0f;
+
+    fKnobWet->setAbsolutePos(width - 155, height - 90);
+    fLabelWet->setAbsolutePos(width - 155 - centerAlignDifference, height - fLabelPreGain->getHeight() - knobLabelMarginBottom);
+
+    centerAlignDifference = (fLabelPostGain->getWidth() - fKnobPostGain->getWidth()) / 2.0f;
+
+    fKnobPostGain->setAbsolutePos(width - 85, height - 90);
+    fLabelPostGain->setAbsolutePos(width - 85 - centerAlignDifference, height - fLabelPreGain->getHeight() - knobLabelMarginBottom);
+
+    centerAlignDifference = (fLabelListHorizontalWarpType->getWidth() - fKnobHorizontalWarp->getWidth()) / 2.0f;
+
+    fKnobHorizontalWarp->setAbsolutePos(fKnobPreGain->getAbsoluteX() - 230, height - 90);
+    fLabelListHorizontalWarpType->setAbsolutePos(fKnobPreGain->getAbsoluteX() - 230 - centerAlignDifference, height - fLabelListHorizontalWarpType->getHeight() - knobLabelMarginBottom);
+
+    fButtonLeftArrowHorizontalWarp->setAbsolutePos(fLabelListHorizontalWarpType->getAbsoluteX() - fButtonLeftArrowHorizontalWarp->getWidth(), fLabelListHorizontalWarpType->getAbsoluteY());
+    fButtonRightArrowHorizontalWarp->setAbsolutePos(fLabelListHorizontalWarpType->getAbsoluteX() + fLabelListHorizontalWarpType->getWidth(), fLabelListHorizontalWarpType->getAbsoluteY());
+
+    centerAlignDifference = (fLabelListVerticalWarpType->getWidth() - fKnobVerticalWarp->getWidth()) / 2.0f;
+
+    fKnobVerticalWarp->setAbsolutePos(fKnobPreGain->getAbsoluteX() - 110, height - 90);
+    fLabelListVerticalWarpType->setAbsolutePos(fKnobPreGain->getAbsoluteX() - 110 - centerAlignDifference, height - fLabelListVerticalWarpType->getHeight() - knobLabelMarginBottom);
+
+    fButtonLeftArrowVerticalWarp->setAbsolutePos(fLabelListVerticalWarpType->getAbsoluteX() - fButtonLeftArrowVerticalWarp->getWidth(), fLabelListVerticalWarpType->getAbsoluteY());
+    fButtonRightArrowVerticalWarp->setAbsolutePos(fLabelListVerticalWarpType->getAbsoluteX() + fLabelListVerticalWarpType->getWidth(), fLabelListVerticalWarpType->getAbsoluteY());
+
+    fHandleResize->setAbsolutePos(width - fHandleResize->getWidth(), height - fHandleResize->getHeight());
+}
+
+void RemoteEntanglementPluginUi::parameterChanged(uint32_t index, float value) {
+    switch (index) {
+        case paramPreGain:
+            fKnobPreGain->setValue(value);
+            break;
+        case paramWet:
+            fKnobWet->setValue(value);
+            break;
+        case paramPostGain:
+            fKnobPostGain->setValue(value);
+            break;
+        case paramRemoveDC:
+            fSwitchRemoveDC->setDown(value >= 0.50f);
+            break;
+        case paramOversample:
+            fWheelOversample->setValue(value);
+            break;
+        case paramBipolarMode:
+        {
+            const bool down = value >= 0.50f;
+
+            fSwitchBipolarMode->setDown(down);
+            fLabelsBoxBipolarMode->setSelectedIndex(down ? 1 : 0);
+            break;
+        }
+        case paramHorizontalWarpType:
+        {
+            const int warpType = std::round(value);
+
+            fGraphWidget->setHorizontalWarpType((wolf::WarpType)warpType);
+            fLabelListHorizontalWarpType->setSelectedIndex(warpType);
+
+            break;
+        }
+        case paramHorizontalWarpAmount:
+            fKnobHorizontalWarp->setValue(value);
+            fGraphWidget->setHorizontalWarpAmount(value);
+            break;
+        case paramVerticalWarpType:
+        {
+            const int warpType = std::round(value);
+
+            fGraphWidget->setVerticalWarpType((wolf::WarpType)warpType);
+            fLabelListVerticalWarpType->setSelectedIndex(warpType);
+
+            break;
+        }
+        case paramVerticalWarpAmount:
+            fKnobVerticalWarp->setValue(value);
+            fGraphWidget->setVerticalWarpAmount(value);
+            break;
+        case paramOut:
+            fGraphWidget->updateInput(value);
+            break;
+        default:
+            break;
+    }
+}
+
+void RemoteEntanglementPluginUi::stateChanged(const char *key, const char *value) {
+    if (std::strcmp(key, "graph") == 0)
+        fGraphWidget->rebuildFromString(value);
+
+    repaint();
+}
+
+void RemoteEntanglementPluginUi::onNanoDisplay() {
+    const float width = getWidth();
+    const float height = getHeight();
+
+    //background
+    beginPath();
+
+    rect(0.f, 0.f, width, height);
+    fillColor(WolfShaperConfig::plugin_background);
+
+    fill();
+
+    closePath();
+
+    //shadow at the bottom of the graph
+    beginPath();
+
+    const int shadowHeight = 8;
+    const int shadowMargin = 2;
+
+    const float graphBottom = fGraphWidget->getAbsoluteY() + fGraphWidget->getHeight();
+    const float shadowTop = graphBottom + shadowMargin;
+    const float shadowBottom = shadowTop + shadowHeight;
+
+    rect(0.0f, shadowTop, getWidth(), shadowHeight);
+
+    Paint gradient = linearGradient(0, shadowTop, 0, shadowBottom, Color(21, 22, 30, 0), Color(21, 22, 30, 180));
+    fillPaint(gradient);
+
+    fill();
+
+    closePath();
+}
+
+void RemoteEntanglementPluginUi::uiIdle() {
+}
+
+bool RemoteEntanglementPluginUi::onMouse(const MouseEvent &) {
+    return false;
+}
+
+void RemoteEntanglementPluginUi::uiReshape(uint width, uint height) {
+    //setSize(width, height);
+    positionWidgets(width, height);
+}
+
+void RemoteEntanglementPluginUi::toggleBottomBarVisibility() {
+    fBottomBarVisible = !fBottomBarVisible;
+
+    fLabelsBoxBipolarMode->setVisible(fBottomBarVisible);
+    fSwitchBipolarMode->setVisible(fBottomBarVisible);
+    fSwitchRemoveDC->setVisible(fBottomBarVisible);
+    fKnobPostGain->setVisible(fBottomBarVisible);
+    fKnobPreGain->setVisible(fBottomBarVisible);
+
+    fKnobHorizontalWarp->setVisible(fBottomBarVisible);
+    fLabelListHorizontalWarpType->setVisible(fBottomBarVisible);
+    fButtonLeftArrowHorizontalWarp->setVisible(fBottomBarVisible);
+    fButtonRightArrowHorizontalWarp->setVisible(fBottomBarVisible);
+
+    fKnobVerticalWarp->setVisible(fBottomBarVisible);
+    fLabelListVerticalWarpType->setVisible(fBottomBarVisible);
+    fButtonLeftArrowVerticalWarp->setVisible(fBottomBarVisible);
+    fButtonRightArrowVerticalWarp->setVisible(fBottomBarVisible);
+
+    fKnobWet->setVisible(fBottomBarVisible);
+    fLabelPostGain->setVisible(fBottomBarVisible);
+    fLabelPreGain->setVisible(fBottomBarVisible);
+    fLabelWet->setVisible(fBottomBarVisible);
+    fLabelRemoveDC->setVisible(fBottomBarVisible);
+
+    positionWidgets(getWidth(), getHeight());
+}
+
+bool RemoteEntanglementPluginUi::onKeyboard(const KeyboardEvent &ev) {
+    if (ev.press) {
+        if (ev.key == 95) //F11
+        {
+            toggleBottomBarVisibility();
+        }
+    }
+
+    return true;
+}
+
+void RemoteEntanglementPluginUi::nanoSwitchClicked(NanoSwitch *nanoSwitch) {
+    const uint switchId = nanoSwitch->getId();
+    const int value = nanoSwitch->isDown() ? 1 : 0;
+
+    setParameterValue(switchId, value);
+
+    if (switchId == paramBipolarMode) {
+        fLabelsBoxBipolarMode->setSelectedIndex(value);
+    }
+}
+
+void RemoteEntanglementPluginUi::nanoButtonClicked(NanoButton *nanoButton) {
+    if (nanoButton == fButtonResetGraph) {
+        fGraphWidget->reset();
+        return;
+    }
+
+    bool horizontal = false;
+
+    if (nanoButton == fButtonLeftArrowHorizontalWarp) {
+        fLabelListHorizontalWarpType->goPrevious();
+        horizontal = true;
+    } else if (nanoButton == fButtonRightArrowHorizontalWarp) {
+        fLabelListHorizontalWarpType->goNext();
+        horizontal = true;
+    } else if (nanoButton == fButtonLeftArrowVerticalWarp) {
+        fLabelListVerticalWarpType->goPrevious();
+    } else if (nanoButton == fButtonRightArrowVerticalWarp) {
+        fLabelListVerticalWarpType->goNext();
+    }
+
+    if (horizontal) {
+        const int index = fLabelListHorizontalWarpType->getSelectedIndex();
+
+        setParameterValue(paramHorizontalWarpType, index);
+        fGraphWidget->setHorizontalWarpType((wolf::WarpType)index);
+    } else {
+        const int index = fLabelListVerticalWarpType->getSelectedIndex();
+
+        setParameterValue(paramVerticalWarpType, index);
+        fGraphWidget->setVerticalWarpType((wolf::WarpType)index);
+    }
+}
+
+void RemoteEntanglementPluginUi::nanoWheelValueChanged(NanoWheel *nanoWheel, const int value) {
+    const uint id = nanoWheel->getId();
+
+    setParameterValue(paramOversample, value);
+
+    if (id == paramHorizontalWarpType) {
+        fGraphWidget->setHorizontalWarpType((wolf::WarpType)std::round(value));
+    } else if (id == paramVerticalWarpType) {
+        fGraphWidget->setVerticalWarpType((wolf::WarpType)std::round(value));
+    }
+}
+
+void RemoteEntanglementPluginUi::nanoKnobValueChanged(NanoKnob *nanoKnob, const float value) {
+    const uint id = nanoKnob->getId();
+
+    setParameterValue(id, value);
+
+    if (id == paramHorizontalWarpAmount) {
+        fGraphWidget->setHorizontalWarpAmount(value);
+    } else if (id == paramVerticalWarpAmount) {
+        fGraphWidget->setVerticalWarpAmount(value);
+    }
+}
+
+void RemoteEntanglementPluginUi::resizeHandleMoved(int width, int height) {
+    setSize(width, height);
+}
+
+UI *createUI() {
+    return new RemoteEntanglementPluginUi();
+}
 
 END_NAMESPACE_DISTRHO
