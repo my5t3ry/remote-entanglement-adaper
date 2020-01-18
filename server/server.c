@@ -214,7 +214,7 @@ int main() {
         memset(&frame, 0, sizeof(frame));
 
         frame.samples = recv_samples;
-        frame.samples_size = EXAMPLE_BUFFER_SIZE * sizeof(float);
+//        frame.samples_size = ;
 
         if (roc_receiver_read(receiver, &frame) != 0) {
             break;

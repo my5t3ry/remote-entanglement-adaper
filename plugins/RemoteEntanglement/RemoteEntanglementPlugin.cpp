@@ -451,10 +451,9 @@ protected:
                     float* osamples = (float*)out_frame.samples;
                     float* const outL = outputs[0];
                     float* const outR = outputs[1];
-                    logFloat(((float*)&osamples)[0]);
+//                    logFloat(((float*)&osamples)[0]);
                     std::memset(outL, ((float*)&osamples)[0], sizeof ((float*)&osamples)[0]);
                     std::memset(outR, ((float*)&osamples)[1], sizeof ((float*)&osamples)[1]);
-//             
                 }
             }
 
