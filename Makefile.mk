@@ -137,7 +137,7 @@ DGL_LIBS  = -framework OpenGL -framework Cocoa
 endif
 
 ifeq ($(WIN32),true)
-DGL_LIBS  = -lopengl32 -lgdi32 -static-libgcc -static-libstdc++ -static -lpthread
+DGL_LIBS  = -lopengl32 -lgdi32 -static-libgcc -static-libstdc++ -static -lpthread -lnanogui
 endif
 
 endif # HAVE_DGL
