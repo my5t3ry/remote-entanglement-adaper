@@ -444,10 +444,17 @@ protected:
 
                 roc_frame out_frame;
                 memset(&out_frame, 0, sizeof (out_frame));
+
                 if (roc_receiver_read(receiver_, &out_frame) != 0) {
                     break;
                 } else {
-                    std::memcpy(outputs[0], &out_frame.samples, sizeof (float) * sizeof (&out_frame.samples));
+                    float* osamples = (float*)out_frame.samples;
+                    float* const outL = outputs[0];
+                    float* const outR = outputs[1];
+                    logFloat(((float*)&osamples)[0]);
+                    std::memset(outL, ((float*)&osamples)[0], sizeof ((float*)&osamples)[0]);
+                    std::memset(outR, ((float*)&osamples)[1], sizeof ((float*)&osamples)[1]);
+//             
                 }
             }
 
